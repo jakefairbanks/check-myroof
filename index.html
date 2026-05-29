@@ -226,12 +226,30 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
     position: relative;
     display: grid;
     grid-template-columns: 1.4fr 1fr;
-    gap: 56px;
+    grid-template-areas:
+      "copy video"
+      "actions video";
+    column-gap: 56px;
+    row-gap: 0;
     align-items: center;
   }
+  .hero-copy   { grid-area: copy; }
+  .hero-video  { grid-area: video; }
+  .hero-actions { grid-area: actions; }
   @media (max-width: 920px) {
     .hero { padding: 28px 0 20px; }
-    .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+    .hero-grid {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "copy"
+        "video"
+        "actions";
+      column-gap: 0;
+      row-gap: 10px;
+    }
+    /* Paragraph hidden on mobile so the video sits right under the headline. */
+    .hero-sub { display: none; }
+    .hero-actions { margin-top: 2px; }
   }
   .hero-video { display: flex; justify-content: center; }
 
@@ -754,7 +772,10 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
       <p class="hero-sub" id="hero-sub">
         Free roof inspection. If you have hail or wind damage, we document it, meet your adjuster on-site, and manage the claim end-to-end — <strong style="color:var(--gold);font-weight:700;">you pay only your deductible.</strong> Owens Corning Platinum Preferred.
       </p>
+    </div>
 
+    <!-- hero-actions: on desktop sits below the copy (left column); on mobile drops below the video -->
+    <div class="hero-actions">
       <div class="cta-row">
         <a href="#book" class="btn btn-primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
