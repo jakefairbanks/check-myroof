@@ -382,6 +382,34 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
   }
   .form-success.show { display: block; }
 
+  /* ───────────── TEAM ───────────── */
+  section.team { padding: 64px 0 16px; }
+  .team-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px 40px;
+    margin-top: 8px;
+  }
+  .team-member { width: 150px; text-align: center; margin: 0; }
+  .team-photo {
+    width: 132px; height: 132px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--gold);
+    box-shadow: var(--shadow-md);
+    background: var(--surface-2);
+    margin: 0 auto 14px;
+    transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+  }
+  .team-member:hover .team-photo { transform: translateY(-4px); box-shadow: var(--gold-shadow); }
+  .team-name { font-weight: 700; font-size: 16px; color: var(--text); letter-spacing: -.01em; }
+  @media (max-width: 600px) {
+    .team-row { gap: 24px 30px; }
+    .team-member { width: 132px; }
+    .team-photo { width: 112px; height: 112px; }
+  }
+
   /* ───────────── REVIEWS — animated "wall of love" ───────────── */
   section.reviews { padding: 24px 0 80px; }
   .rv-meta { display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; margin: 0 auto 36px; text-align:center; }
@@ -703,6 +731,33 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
           ✓ Got it. We'll call you within one business hour.
         </div>
       </form>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── TEAM ───────────── -->
+<section class="team">
+  <div class="container">
+    <div class="section-eyebrow reveal">Meet the crew</div>
+    <h2 class="section-title reveal">The team behind the reputation.</h2>
+    <p class="section-sub reveal">Real, local people you'll actually work with — on your roof and in your corner.</p>
+    <div class="team-row reveal">
+      <figure class="team-member">
+        <img class="team-photo" loading="lazy" alt="Christina Fairbanks" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/d14fd211-98fa-4b3e-87cc-908f151b284a/DSC08839.jpg?content-type=image%2Fjpeg">
+        <figcaption class="team-name">Christina Fairbanks</figcaption>
+      </figure>
+      <figure class="team-member">
+        <img class="team-photo" loading="lazy" alt="Terrance Bunch" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/82e5811c-4e31-4c48-8b2d-385a9c0ef007/DSC09053.jpg?content-type=image%2Fjpeg">
+        <figcaption class="team-name">Terrance Bunch</figcaption>
+      </figure>
+      <figure class="team-member">
+        <img class="team-photo" loading="lazy" alt="Jake Fairbanks" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/6c117aa7-82e8-4a57-a44a-380570c2f9f2/DSC09038.jpg?content-type=image%2Fjpeg">
+        <figcaption class="team-name">Jake Fairbanks</figcaption>
+      </figure>
+      <figure class="team-member">
+        <img class="team-photo" loading="lazy" alt="Aaron Caldwell" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/97eff6b6-62e3-4a01-a779-ba9e3657698f/DSC09064.jpg?content-type=image%2Fjpeg">
+        <figcaption class="team-name">Aaron Caldwell</figcaption>
+      </figure>
     </div>
   </div>
 </section>
