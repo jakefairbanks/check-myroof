@@ -964,16 +964,17 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
       payload.submitted_at = new Date().toISOString();
       payload.page_url     = window.location.href;
       payload.referrer     = document.referrer || '';
-      const res = await fetch(form.action, {
+      // Send as form-urlencoded in no-cors mode: a "simple" request that avoids the CORS
+      // preflight (so Zapier parses each field by name) and the cross-origin response-read error.
+      await fetch(form.action, {
         method: 'POST',
-        body: JSON.stringify(payload),
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(payload).toString()
       });
-      if (res.ok) {
-        form.style.display = 'none';
-        success.classList.add('show');
-        if (window.fbq) fbq('track', 'Lead');
-      } else { throw new Error('submit-failed'); }
+      form.style.display = 'none';
+      success.classList.add('show');
+      if (window.fbq) fbq('track', 'Lead');
     } catch (err) {
       btn.textContent = original;
       btn.disabled = false;
