@@ -603,7 +603,9 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
     transition: transform .2s var(--ease), box-shadow .2s var(--ease);
   }
   .team-member:hover .team-photo { transform: translateY(-4px); box-shadow: var(--gold-shadow); }
-  .team-name { font-weight: 700; font-size: 16px; color: var(--text); letter-spacing: -.01em; }
+  .team-name { display: block; font-weight: 700; font-size: 16px; color: var(--text); letter-spacing: -.01em; }
+  .team-role { display: block; font-weight: 600; font-size: 13px; color: var(--gold-text); margin-top: 2px; }
+  .diff-logo { height: 60px; width: auto; display: block; margin-bottom: 18px; }
   @media (max-width: 600px) {
     .team-row { gap: 24px 30px; }
     .team-member { width: 132px; }
@@ -884,9 +886,7 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
 
     <div class="diff-grid">
       <div class="diff-card reveal">
-        <div class="diff-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
-        </div>
+        <img class="diff-logo" loading="lazy" alt="Owens Corning Platinum Preferred Contractor" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/6966c90d-cf61-4f78-84ff-a6263afd5912/PPC_0c100m81y4k_withPanther+copy.png?content-type=image%2Fpng">
         <h3>Owens Corning Platinum Preferred</h3>
         <p>Top 1% of roofers nationwide. That tier unlocks the strongest manufacturer warranties — and means your roof is installed to exact spec, not by a crew passing through after the storm.</p>
       </div>
@@ -993,19 +993,19 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
     <div class="team-row reveal">
       <figure class="team-member">
         <img class="team-photo" loading="lazy" alt="Christina Fairbanks" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/d14fd211-98fa-4b3e-87cc-908f151b284a/DSC08839.jpg?content-type=image%2Fjpeg">
-        <figcaption class="team-name">Christina Fairbanks</figcaption>
+        <figcaption><span class="team-name">Christina Fairbanks</span><span class="team-role">Office Manager</span></figcaption>
       </figure>
       <figure class="team-member">
         <img class="team-photo" loading="lazy" alt="Terrance Bunch" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/82e5811c-4e31-4c48-8b2d-385a9c0ef007/DSC09053.jpg?content-type=image%2Fjpeg">
-        <figcaption class="team-name">Terrance Bunch</figcaption>
+        <figcaption><span class="team-name">Terrance Bunch</span><span class="team-role">Project Consultant</span></figcaption>
       </figure>
       <figure class="team-member">
         <img class="team-photo" loading="lazy" alt="Jake Fairbanks" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/6c117aa7-82e8-4a57-a44a-380570c2f9f2/DSC09038.jpg?content-type=image%2Fjpeg">
-        <figcaption class="team-name">Jake Fairbanks</figcaption>
+        <figcaption><span class="team-name">Jake Fairbanks</span><span class="team-role">Owner</span></figcaption>
       </figure>
       <figure class="team-member">
         <img class="team-photo" loading="lazy" alt="Aaron Caldwell" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/97eff6b6-62e3-4a01-a779-ba9e3657698f/DSC09064.jpg?content-type=image%2Fjpeg">
-        <figcaption class="team-name">Aaron Caldwell</figcaption>
+        <figcaption><span class="team-name">Aaron Caldwell</span><span class="team-role">On-Site Supervisor</span></figcaption>
       </figure>
     </div>
   </div>
