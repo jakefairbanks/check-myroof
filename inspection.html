@@ -320,24 +320,29 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
   .diff-card h3 { font-size: 19px; font-weight: 700; margin: 0 0 8px; letter-spacing: -.01em; color: var(--text); }
   .diff-card p { color: var(--text-dim); margin: 0; font-size: 15px; line-height: 1.6; }
 
-  /* ───────────── OFFER BAND ───────────── */
-  section.offer { padding: 6px 0 0; }
-  .offer-box {
-    display: flex; align-items: center; gap: 22px;
-    background: linear-gradient(135deg, var(--gold-soft), rgba(225,182,84,.05));
-    border: 1.5px solid rgba(225,182,84,.55);
-    border-radius: var(--radius-lg);
-    padding: 24px 30px;
-    box-shadow: var(--shadow-md);
+    /* ───────────── HERO OFFER (free upgrade callout) ───────────── */
+  .hero-offer {
+    display: flex; align-items: center; gap: 14px;
+    max-width: 560px;
+    background: linear-gradient(135deg, #f7e0a4, var(--gold));
+    border: 1px solid var(--gold-deep);
+    border-radius: 14px;
+    padding: 12px 16px;
+    margin: 2px 0 22px;
+    box-shadow: 0 12px 28px rgba(201,154,40,.32);
   }
-  .offer-icon { flex-shrink:0; width:58px; height:58px; border-radius:14px; background:var(--gold); color:#1a1a1a; display:grid; place-items:center; box-shadow:var(--gold-shadow); }
-  .offer-icon svg { width:30px; height:30px; }
-  .offer-tag { display:inline-block; font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold-text); margin-bottom:6px; }
-  .offer-box h2 { font-size:clamp(20px,2.6vw,28px); font-weight:800; letter-spacing:-.02em; line-height:1.12; margin:0 0 8px; color:var(--text); }
-  .offer-box h2 .accent { color:var(--gold-text); }
-  .offer-box p { margin:0; color:var(--text-dim); font-size:15px; line-height:1.55; }
-  .offer-box p strong { color:var(--text); }
-  @media (max-width: 600px) { .offer-box { flex-direction:column; align-items:flex-start; gap:14px; padding:22px 20px; } }
+  .hero-offer-badge {
+    flex-shrink: 0;
+    background: #1a1a1a; color: var(--gold);
+    font-weight: 900; font-size: 15px; letter-spacing: .08em;
+    padding: 8px 13px; border-radius: 9px; text-transform: uppercase;
+    animation: heroOfferPulse 1.9s ease-in-out infinite;
+  }
+  @keyframes heroOfferPulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.07);} }
+  .hero-offer-text { display: flex; flex-direction: column; line-height: 1.22; }
+  .hero-offer-text strong { font-size: 15.5px; font-weight: 800; color: #1a1a1a; letter-spacing: -.01em; }
+  .hero-offer-text span { font-size: 13px; color: rgba(26,26,26,.74); font-weight: 600; }
+  @media (prefers-reduced-motion: reduce) { .hero-offer-badge { animation: none; } }
 
   /* ───────────── BOOKING SECTION ───────────── */
   section.book { padding: 72px 0 48px; }
@@ -568,6 +573,13 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
       <h1 class="hero-headline" id="hero-headline">
         Not Sure if the Storm <span class="accent">Damaged Your Roof?</span> Find Out Free.
       </h1>
+      <div class="hero-offer">
+        <span class="hero-offer-badge">FREE</span>
+        <div class="hero-offer-text">
+          <strong>Class 4 hail-rated shingle upgrade</strong>
+          <span>Owens Corning Duration FLEX installed at no extra cost</span>
+        </div>
+      </div>
       <p class="hero-sub" id="hero-sub">
         Hail and wind damage is almost impossible to see from the ground. We'll climb up, inspect every shingle, and give you an <strong style="color:var(--gold);font-weight:700;">honest answer</strong> — no cost, no pressure, no obligation. Owens Corning Platinum Preferred.
       </p>
@@ -623,22 +635,6 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
 </section>
 
 <!-- ───────────── HOW IT WORKS ───────────── -->
-<!-- ───────────── OFFER BAND ───────────── -->
-<section class="offer">
-  <div class="container">
-    <div class="offer-box reveal">
-      <div class="offer-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
-      </div>
-      <div class="offer-copy">
-        <span class="offer-tag">Free hail-season upgrade</span>
-        <h2>We install <span class="accent">Class 4 hail-rated shingles &mdash; free.</span></h2>
-        <p>Every roof we replace is upgraded to <strong>Owens Corning Duration FLEX</strong> &mdash; impact-resistant, Class 4 shingles built to take a beating from hail &mdash; at no extra cost to you. A tougher roof, and you may even earn a lower insurance premium.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="steps">
   <div class="container">
     <div class="section-eyebrow reveal">What to expect</div>
