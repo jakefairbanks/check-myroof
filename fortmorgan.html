@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Fort Morgan CO Hail & Storm Damage Roof Repair — Free Inspection | Ideal Roof & Exterior Pros</title>
+<meta name="description" content="Hail or wind damage in Fort Morgan, CO? Free roof inspection. We handle your insurance claim end-to-end — you pay only your deductible. Owens Corning Platinum Preferred. Book online." />
+
+<!--
+  ====================================================================================
+  IDEAL ROOF & EXTERIOR PROS — HAILSTORM / INSURANCE CLAIM LANDING PAGE
+  Single-purpose LP for storm-damage Meta Ad campaigns. PRIMARY ANGLE: insurance claim.
+  ====================================================================================
+
+  PLACEHOLDERS TO REPLACE BEFORE LAUNCH (search for the word "REPLACE"):
+
+    1. VIDEO_EMBED ............. Paste your Vimeo/YouTube/Wistia embed iframe (9:16 vertical)
+    2. CALENDLY_URL ............ Paste your NEW storm/roof inspection Calendly event URL
+    3. WEBHOOK_URL ............. Zapier "Catch Hook" URL — see jobnimbus-integration-setup.md
+    4. 548401943404976 ........... Your Meta Pixel ID
+    (Logo, and phone number — (720) 316-5455 — are wired in.)
+
+  UTM-AWARE HEADLINES:
+    Pass ?v=hail, ?v=wind, ?v=deductible, ?v=storm-just-hit, or ?v=denied in the ad URL
+    to swap the hero headline + subhead. Defaults to the insurance-claim hero. See the
+    HEADLINE_VARIANTS object in the script at the bottom.
+
+  CONVERSION EVENTS FIRED:
+    - Lead          → form submission
+    - Schedule      → Calendly booking complete
+    - Contact       → tap-to-call click
+  ====================================================================================
+-->
+
+<!-- Google Fonts — Golos Text (matches myidealpros.com) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Calendly stylesheet (script loads inline with the widget below — see booking section) -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+<!-- ============ META PIXEL — REPLACE 548401943404976 ============ -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '548401943404976');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></noscript>
+<!-- ============ /META PIXEL ============ -->
+
+<!-- ============ GOOGLE ADS TAG — REPLACE GOOGLE_TAG_ID (e.g. AW-1234567890) in BOTH spots below.
+     For conversion tracking, also send your conversion label and I'll fire it on form submit + booking. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GOOGLE_TAG_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GOOGLE_TAG_ID');
+</script>
+<!-- ============ /GOOGLE ADS TAG ============ -->
+
+<style>
+  :root {
+    /* Warm cream + gold light theme. (Identical palette to the paint LP.) */
+    --bg:              #FAF7F0;
+    --bg-elevated:     #F5F1E8;
+    --surface:         #FFFFFF;
+    --surface-2:       #F8F4EC;
+    --surface-dark:    #1a1a1a;
+    --border:          rgba(26,26,26,.10);
+    --border-strong:   rgba(26,26,26,.18);
+    --text:            #1a1a1a;
+    --text-dim:        rgba(26,26,26,.68);
+    --text-muted:      rgba(26,26,26,.50);
+    --text-on-dark:    #FFFFFF;
+    --gold:            #E1B654;
+    --gold-hover:      #ecc66a;
+    --gold-text:       #9C7A1F;
+    --gold-deep:       #B8923A;
+    --gold-soft:       rgba(225,182,84,.14);
+    --gold-glow:       rgba(225,182,84,.32);
+    --shadow-sm:       0 1px 2px rgba(26,26,26,.04), 0 1px 3px rgba(26,26,26,.04);
+    --shadow-md:       0 8px 24px rgba(26,26,26,.06), 0 2px 6px rgba(26,26,26,.04);
+    --shadow-lg:       0 28px 60px rgba(26,26,26,.10), 0 8px 20px rgba(26,26,26,.06);
+    --gold-shadow:     0 14px 30px rgba(201,154,40,.28);
+    --gold-shadow-lg:  0 20px 44px rgba(201,154,40,.36);
+    --radius-sm:       8px;
+    --radius:          14px;
+    --radius-lg:       22px;
+    --ease:            cubic-bezier(.2,.7,.2,1);
+    /* Storm-page accent: an urgency band uses a warm red so "act before your window closes"
+       reads as time-sensitive without breaking the brand palette. */
+    --urgent:          #B23A2E;
+    --urgent-soft:     rgba(178,58,46,.10);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--bg); }
+  body {
+    margin: 0;
+    font-family: 'Golos Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; }
+
+  .container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 22px;
+  }
+
+  /* ───────────── STICKY HEADER ───────────── */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250,247,240,0.88);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    gap: 16px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -.01em;
+  }
+  .logo img { max-height: 52px; width: auto; }
+  .logo-fallback { display: flex; align-items: center; gap: 10px; }
+  .logo-mark {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+    display: grid; place-items: center;
+    color: #0b0b0b;
+    font-size: 22px; font-weight: 900;
+  }
+
+  .header-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold);
+    color: #1a1a1a;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: var(--gold-shadow);
+    transition: transform .15s var(--ease), background .15s var(--ease), box-shadow .15s var(--ease);
+  }
+  .header-call:hover { background: var(--gold-hover); transform: translateY(-1px); box-shadow: var(--gold-shadow-lg); }
+  .header-call svg { width: 16px; height: 16px; }
+  @media (max-width: 520px) {
+    .header-call span.label { display: none; }
+    .header-call { padding: 11px 14px; }
+  }
+
+  /* ───────────── URGENCY BAND ─────────────
+     Storm-specific. Colorado's standard property-insurance claim window is one year
+     from the date of loss — this band keeps that clock visible without being alarmist. */
+  .urgency-band {
+    background: var(--urgent);
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 16px;
+    letter-spacing: .005em;
+  }
+  .urgency-band strong { font-weight: 800; }
+  @media (max-width: 520px) { .urgency-band { font-size: 12.5px; padding: 8px 12px; } }
+
+  /* ───────────── HERO ───────────── */
+  .hero {
+    position: relative;
+    padding: 56px 0 28px;
+    overflow: hidden;
+    background-color: var(--bg);
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg,
+        rgba(250,247,240,0.96) 0%,
+        rgba(250,247,240,0.88) 35%,
+        rgba(250,247,240,0.55) 70%,
+        rgba(250,247,240,0.30) 100%),
+      radial-gradient(80% 60% at 80% 0%, rgba(225,182,84,.10), transparent 60%);
+    pointer-events: none;
+  }
+  @media (max-width: 920px) {
+    .hero { background-position: center 25%; }
+    .hero::before {
+      background:
+        linear-gradient(180deg,
+          rgba(250,247,240,0.94) 0%,
+          rgba(250,247,240,0.86) 30%,
+          rgba(250,247,240,0.55) 60%,
+          rgba(250,247,240,0.30) 85%,
+          rgba(250,247,240,0.40) 100%),
+        radial-gradient(80% 60% at 80% 0%, rgba(225,182,84,.10), transparent 60%);
+    }
+  }
+  .hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-areas:
+      "copy video"
+      "actions video";
+    column-gap: 56px;
+    row-gap: 0;
+    align-items: center;
+  }
+  .hero-copy   { grid-area: copy; }
+  .hero-video  { grid-area: video; }
+  .hero-actions { grid-area: actions; }
+  @media (max-width: 920px) {
+    .hero { padding: 28px 0 20px; }
+    .hero-grid {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "copy"
+        "video"
+        "actions";
+      column-gap: 0;
+      row-gap: 10px;
+    }
+    /* Paragraph hidden on mobile so the video sits right under the headline. */
+    .hero-sub { display: none; }
+    .hero-actions { margin-top: 2px; }
+  }
+  .hero-video { display: flex; justify-content: center; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--gold-soft);
+    color: var(--gold-text);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: .02em;
+    margin-bottom: 18px;
+    border: 1px solid rgba(225,182,84,.32);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--gold-text);
+    box-shadow: 0 0 0 4px rgba(201,154,40,.22);
+  }
+  h1.hero-headline {
+    font-size: clamp(34px, 5.2vw, 58px);
+    line-height: 1.04;
+    letter-spacing: -.025em;
+    font-weight: 800;
+    margin: 0 0 16px;
+    color: var(--text);
+  }
+  h1 .accent { color: var(--gold-text); }
+  .hero-sub {
+    font-size: clamp(16px, 1.7vw, 19px);
+    color: var(--text-dim);
+    line-height: 1.55;
+    margin: 0 0 28px;
+    max-width: 560px;
+  }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 22px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -.005em;
+    transition: transform .15s var(--ease), box-shadow .15s var(--ease), background .15s var(--ease);
+    min-height: 56px;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: #1a1a1a;
+    box-shadow: var(--gold-shadow);
+  }
+  .btn-primary:hover { background: var(--gold-hover); transform: translateY(-2px); box-shadow: var(--gold-shadow-lg); }
+  .btn-secondary {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+  }
+  .btn-secondary:hover { background: var(--surface-2); transform: translateY(-2px); border-color: var(--gold-text); }
+  .btn svg { width: 18px; height: 18px; }
+
+  .trust-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 28px;
+    align-items: center;
+    color: var(--text-dim);
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+  .trust-item { display: inline-flex; align-items: center; gap: 8px; }
+  .trust-item svg { width: 18px; height: 18px; color: var(--gold-text); flex-shrink: 0; }
+  .trust-item strong { color: var(--text); font-weight: 700; }
+
+  /* ───────────── HERO VIDEO (9:16 vertical, mobile-first) ───────────── */
+  .video-wrap {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--surface-2);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  @media (max-width: 920px) { .video-wrap { max-width: 100%; } }
+  .video-wrap iframe,
+  .video-wrap video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .video-placeholder {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--text);
+    text-align: center;
+    background:
+      radial-gradient(60% 60% at 50% 40%, rgba(225,182,84,.20), transparent 70%),
+      linear-gradient(135deg, var(--surface-2), var(--bg));
+  }
+  .video-placeholder .play-btn {
+    width: 88px; height: 88px;
+    border-radius: 999px;
+    background: var(--gold);
+    color: #1a1a1a;
+    display: grid; place-items: center;
+    box-shadow: var(--gold-shadow-lg);
+    margin-bottom: 18px;
+    transition: transform .2s var(--ease);
+  }
+  .video-placeholder .play-btn:hover { transform: scale(1.06); }
+  .video-placeholder .play-btn svg { width: 38px; height: 38px; color: #1a1a1a; margin-left: 4px; }
+  .video-placeholder .ph-label { font-size: 13px; opacity: .9; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--gold-text); }
+  .video-placeholder .ph-note { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+
+  /* ───────────── HOW IT WORKS (storm-specific 3-step) ───────────── */
+  section.steps { padding: 64px 0 24px; }
+  .section-eyebrow {
+    text-align: center;
+    color: var(--gold-text);
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .section-title {
+    text-align: center;
+    font-size: clamp(28px, 3.4vw, 42px);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.1;
+    margin: 0 auto 14px;
+    max-width: 720px;
+    color: var(--text);
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 17px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 860px) { .steps-grid { grid-template-columns: 1fr; } }
+  .step-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 30px 26px;
+    position: relative;
+    transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease);
+  }
+  .step-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(225,182,84,.7); }
+  .step-num {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: var(--gold);
+    color: #1a1a1a;
+    display: grid; place-items: center;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 16px;
+    box-shadow: var(--gold-shadow);
+  }
+  .step-card h3 { font-size: 19px; font-weight: 700; margin: 0 0 8px; letter-spacing: -.01em; color: var(--text); }
+  .step-card p { color: var(--text-dim); margin: 0; font-size: 15px; line-height: 1.6; }
+
+  /* ───────────── DIFFERENTIATORS ───────────── */
+  section.diff { padding: 56px 0 24px; }
+  .diff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 860px) { .diff-grid { grid-template-columns: 1fr; } }
+  .diff-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 30px 26px;
+    transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease);
+  }
+  .diff-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(225,182,84,.7); }
+  .diff-icon {
+    width: 50px; height: 50px;
+    border-radius: 12px;
+    background: var(--gold-soft);
+    color: var(--gold-text);
+    display: grid; place-items: center;
+    margin-bottom: 18px;
+    border: 1px solid rgba(225,182,84,.32);
+  }
+  .diff-icon svg { width: 24px; height: 24px; }
+  .diff-card h3 { font-size: 19px; font-weight: 700; margin: 0 0 8px; letter-spacing: -.01em; color: var(--text); }
+  .diff-card p { color: var(--text-dim); margin: 0; font-size: 15px; line-height: 1.6; }
+
+    /* ───────────── HERO OFFER (free upgrade callout) ───────────── */
+    .hero-offer {
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; gap: 14px;
+    max-width: 580px;
+    background: linear-gradient(135deg, #fcefc3 0%, var(--gold) 55%, var(--gold-deep) 100%);
+    border: 1.5px solid var(--gold-deep);
+    border-radius: 16px;
+    padding: 14px 18px;
+    margin: 4px 0 24px;
+    box-shadow: 0 14px 32px rgba(201,154,40,.42);
+    animation: heroOfferGlow 2.6s ease-in-out infinite;
+  }
+  @keyframes heroOfferGlow {
+    0%,100% { box-shadow: 0 14px 30px rgba(201,154,40,.34); }
+    50%     { box-shadow: 0 16px 42px rgba(201,154,40,.62); }
+  }
+  .hero-offer::after {
+    content:""; position:absolute; top:0; left:-65%; width:45%; height:100%;
+    z-index: 0; pointer-events:none;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,.7), transparent);
+    transform: skewX(-18deg);
+    animation: heroOfferSheen 3.6s ease-in-out infinite;
+  }
+  @keyframes heroOfferSheen { 0%{left:-65%;} 55%{left:135%;} 100%{left:135%;} }
+  .hero-offer-badge {
+    position: relative; z-index: 1;
+    flex-shrink: 0;
+    background: #1a1a1a; color: var(--gold);
+    font-weight: 900; font-size: 15px; letter-spacing: .08em;
+    padding: 9px 14px; border-radius: 10px; text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0,0,0,.3);
+    animation: heroOfferPulse 1.7s ease-in-out infinite;
+  }
+  @keyframes heroOfferPulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.09);} }
+  .hero-offer-text { position: relative; z-index: 1; display: flex; flex-direction: column; line-height: 1.22; }
+  .hero-offer-text strong { font-size: 16px; font-weight: 800; color: #1a1a1a; letter-spacing: -.01em; }
+  .hero-offer-text span { font-size: 13px; color: rgba(26,26,26,.78); font-weight: 600; }
+  @media (prefers-reduced-motion: reduce) { .hero-offer, .hero-offer-badge, .hero-offer::after { animation: none; } }
+
+  /* ───────────── BOOKING SECTION ───────────── */
+  section.book { padding: 72px 0 48px; }
+  .booking-card {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    position: relative;
+  }
+  @media (max-width: 600px) {
+    .calendly-inline-widget { height: 660px !important; }
+  }
+
+  /* ───────────── BACKUP LEAD FORM ───────────── */
+  section.form-section { padding: 12px 0 72px; }
+  .form-card {
+    background: linear-gradient(160deg, #1a1a1a 0%, #0f0f0f 100%);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    padding: 48px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 44px;
+    align-items: center;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(225,182,84,.18);
+  }
+  .form-card::before {
+    content: "";
+    position: absolute;
+    top: -50%; right: -10%;
+    width: 60%; height: 200%;
+    background: radial-gradient(closest-side, rgba(225,182,84,.18), transparent);
+    pointer-events: none;
+  }
+  @media (max-width: 860px) {
+    .form-card { grid-template-columns: 1fr; padding: 32px 24px; gap: 24px; }
+  }
+  .form-copy h2 {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 800;
+    margin: 0 0 12px;
+    letter-spacing: -.015em;
+    line-height: 1.1;
+  }
+  .form-copy p { color: rgba(255,255,255,.78); margin: 0 0 18px; font-size: 16px; }
+  .form-copy ul { margin: 0; padding: 0; list-style: none; }
+  .form-copy li { display: flex; align-items: center; gap: 10px; padding: 6px 0; font-size: 15px; color: rgba(255,255,255,.86); }
+  .form-copy li svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
+
+  .lead-form { display: grid; gap: 14px; position: relative; z-index: 1; }
+  .lead-form label { display: block; }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; gap: 14px; }
+  }
+  .lead-form .label-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,.78);
+    margin-bottom: 6px;
+    letter-spacing: .01em;
+  }
+  .lead-form input {
+    width: 100%;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.16);
+    color: #fff;
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color .15s var(--ease), background .15s var(--ease);
+  }
+  .lead-form input:focus { outline: none; border-color: var(--gold); background: rgba(255,255,255,.12); }
+  .lead-form input::placeholder { color: rgba(255,255,255,.4); }
+  .lead-form button[type="submit"] {
+    background: var(--gold);
+    color: #1a1a1a;
+    padding: 17px 22px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 16px;
+    margin-top: 4px;
+    transition: background .15s var(--ease), transform .15s var(--ease), box-shadow .15s var(--ease);
+    box-shadow: var(--gold-shadow);
+    letter-spacing: .005em;
+  }
+  .lead-form button[type="submit"]:hover { background: var(--gold-hover); transform: translateY(-1px); box-shadow: var(--gold-shadow-lg); }
+  .form-fineprint { font-size: 12px; color: rgba(255,255,255,.5); margin-top: 6px; line-height: 1.5; }
+  .form-success {
+    display: none;
+    background: rgba(16,185,129,.15);
+    border: 1px solid rgba(16,185,129,.35);
+    color: #A7F3D0;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 15px;
+  }
+  .form-success.show { display: block; }
+
+  /* ───────────── TEAM ───────────── */
+  section.team { padding: 64px 0 16px; }
+  .team-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px 40px;
+    margin-top: 8px;
+  }
+  .team-member { width: 150px; text-align: center; margin: 0; }
+  .team-photo {
+    width: 132px; height: 132px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--gold);
+    box-shadow: var(--shadow-md);
+    background: var(--surface-2);
+    margin: 0 auto 14px;
+    transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+  }
+  .team-member:hover .team-photo { transform: translateY(-4px); box-shadow: var(--gold-shadow); }
+  .team-name { display: block; font-weight: 700; font-size: 16px; color: var(--text); letter-spacing: -.01em; }
+  .team-role { display: block; font-weight: 600; font-size: 13px; color: var(--gold-text); margin-top: 2px; }
+  .diff-logo { height: 60px; width: auto; display: block; margin-bottom: 18px; }
+  @media (max-width: 600px) {
+    .team-row { gap: 24px 30px; }
+    .team-member { width: 132px; }
+    .team-photo { width: 112px; height: 112px; }
+  }
+
+  /* ───────────── REVIEWS — animated "wall of love" ───────────── */
+  section.reviews { padding: 24px 0 80px; }
+  .rv-meta { display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; margin: 0 auto 36px; text-align:center; }
+  .rv-stars-xl { color: var(--gold-text); font-size: 24px; letter-spacing: 3px; text-shadow: 0 0 24px rgba(225,182,84,.45); }
+  .rv-meta-txt { color: var(--text-dim); font-size: 15px; }
+  .rv-meta-txt strong { color: var(--text); font-weight: 800; }
+
+  /* Three columns of cards drift vertically at different speeds; pause on hover.
+     Each track holds its cards twice so the loop is seamless. Top/bottom fade mask. */
+  .reviews-wall {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    height: 600px;
+    overflow: hidden;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 22px;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 11%, #000 89%, transparent 100%);
+            mask-image: linear-gradient(180deg, transparent 0, #000 11%, #000 89%, transparent 100%);
+  }
+  .wall-col { position: relative; overflow: hidden; }
+  .wall-track { display: flex; flex-direction: column; animation: wall-scroll 60s linear infinite; will-change: transform; }
+  .wall-col:nth-child(1) .wall-track { animation-duration: 66s; }
+  .wall-col:nth-child(2) .wall-track { animation-duration: 52s; animation-direction: reverse; }
+  .wall-col:nth-child(3) .wall-track { animation-duration: 58s; }
+  .reviews-wall:hover .wall-track { animation-play-state: paused; }
+  @keyframes wall-scroll { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+
+  .rv-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 22px 22px 20px;
+    margin: 0 0 18px;
+    box-shadow: var(--shadow-sm);
+    transition: border-color .2s var(--ease), box-shadow .2s var(--ease), transform .2s var(--ease);
+  }
+  .rv-card:hover { border-color: rgba(225,182,84,.7); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .rv-top { display:flex; align-items:center; justify-content:space-between; margin-bottom: 12px; }
+  .rv-stars { color: var(--gold-text); font-size: 15px; letter-spacing: 2px; }
+  .rv-g { width: 18px; height: 18px; }
+  .rv-card p { margin: 0 0 16px; color: var(--text); font-size: 14.5px; line-height: 1.6; }
+  .rv-card figcaption { display:flex; align-items:center; gap:9px; font-size: 13px; font-weight: 700; color: var(--text); }
+  .rv-av { width: 28px; height: 28px; flex-shrink:0; border-radius: 50%; background: linear-gradient(135deg, var(--gold), var(--gold-deep)); color:#1a1a1a; display:grid; place-items:center; font-weight: 900; font-size: 13px; }
+  .rv-src { color: var(--text-muted); font-weight: 600; margin-left: 2px; }
+  @media (max-width: 860px) {
+    .reviews-wall { grid-template-columns: 1fr; height: 560px; }
+    .wall-col:nth-child(n+2) { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reviews-wall { height: auto; -webkit-mask-image: none; mask-image: none; grid-template-columns: 1fr; }
+    .wall-track { animation: none; }
+    .wall-col:nth-child(n+2) { display: none; }
+  }
+  .review-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  .review-meta .stars-xl {
+    color: var(--gold-text);
+    font-size: 28px;
+    letter-spacing: 4px;
+    line-height: 1;
+    text-shadow: 0 0 24px rgba(225,182,84,.45);
+  }
+  .review-meta .rating-text { color: var(--text-dim); font-size: 15px; letter-spacing: .01em; }
+  .review-meta .rating-text strong { color: var(--text); font-weight: 700; }
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 860px) { .review-grid { grid-template-columns: 1fr; } }
+  .review-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+    box-shadow: var(--shadow-sm);
+  }
+  .review-card:hover { border-color: rgba(225,182,84,.6); box-shadow: var(--shadow-md); }
+  .stars { color: var(--gold-text); font-size: 16px; letter-spacing: 2px; margin-bottom: 12px; }
+  .review-card p { margin: 0 0 14px; color: var(--text); font-size: 15px; line-height: 1.6; }
+  .review-attrib { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+  /* ───────────── FOOTER ───────────── */
+  footer {
+    background: #1a1a1a;
+    color: rgba(255,255,255,.65);
+    padding: 44px 0 110px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,.06);
+  }
+  footer a { color: var(--gold); }
+  footer .small { font-size: 12px; opacity: .55; margin-top: 6px; }
+
+  /* ───────────── STICKY MOBILE CALL BAR ───────────── */
+  .sticky-call {
+    display: none;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    background: rgba(15,15,15,0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border);
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    z-index: 60;
+    box-shadow: 0 -10px 30px rgba(0,0,0,.6);
+  }
+  .sticky-call .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .sticky-call a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .sticky-call .call { background: var(--gold); color: #1a1a1a; box-shadow: var(--gold-shadow); }
+  .sticky-call .book { background: var(--surface); color: var(--text); border: 1px solid var(--border-strong); }
+  .sticky-call svg { width: 16px; height: 16px; }
+  @media (max-width: 860px) {
+    .sticky-call { display: block; }
+  }
+
+  /* ───────────── REVEAL ANIMATIONS (progressive enhancement) ───────────── */
+  .js-enabled .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity .6s var(--ease), transform .6s var(--ease);
+  }
+  .js-enabled .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .js-enabled .reveal,
+    .js-enabled .reveal.in { transition: none; transform: none; opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ───────────── URGENCY BAND ───────────── -->
+<div class="urgency-band">
+  <strong>Fort Morgan just got hit?</strong>&nbsp; In Colorado you generally have <strong>one year from the date of the storm</strong> to file an insurance claim. Get inspected free.
+</div>
+
+<!-- ───────────── STICKY HEADER ───────────── -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#" class="logo" aria-label="Ideal Roof & Exterior Pros">
+      <img src="https://ideal-roof-exterior-pros-v1781529882.websitepro-cdn.com/wp-content/uploads/2026/02/logo-transparency-4-1-copy-1.png"
+           alt="Ideal Roof & Exterior Pros"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <span class="logo-fallback" style="display:none;">
+        <span class="logo-mark">i</span>
+      </span>
+    </a>
+    <a href="tel:+17203165455" class="header-call" data-event="Contact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span class="label">Call (720) 316-5455</span>
+    </a>
+  </div>
+</header>
+
+<!-- ───────────── HERO ───────────── -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Hail &amp; wind damage in Fort Morgan, CO</div>
+      <h1 class="hero-headline" id="hero-headline">
+        Hail Hit Fort Morgan? <span class="accent">We Handle the Insurance Claim.</span>
+      </h1>
+      <div class="hero-offer">
+        <span class="hero-offer-badge">FREE</span>
+        <div class="hero-offer-text">
+          <strong>Class 4 hail-rated shingle upgrade</strong>
+          <span>Owens Corning Duration FLEX installed at no extra cost</span>
+        </div>
+      </div>
+      <p class="hero-sub" id="hero-sub">
+        Serving Fort Morgan, CO. Free roof inspection — if you have hail or wind damage, we document it, meet your adjuster on-site, and manage the claim end-to-end — <strong style="color:var(--gold);font-weight:700;">you pay only your deductible.</strong> Owens Corning Platinum Preferred.
+      </p>
+    </div>
+
+    <!-- hero-actions: on desktop sits below the copy (left column); on mobile drops below the video -->
+    <div class="hero-actions">
+      <div class="cta-row">
+        <a href="#book" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Book My Free Inspection
+        </a>
+        <a href="tel:+17203165455" class="btn btn-secondary" data-event="Contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Call (720) 316-5455
+        </a>
+      </div>
+
+      <div class="trust-strip">
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          <strong>Owens Corning</strong>&nbsp;Platinum Preferred
+        </span>
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          <strong>Licensed</strong>&nbsp;&amp; Insured
+        </span>
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <strong>On-Site</strong>&nbsp;Supervisors
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-video">
+      <div class="video-wrap" id="video-wrap">
+        <!-- Vimeo hero video (9:16 vertical). autoplay + loop + muted, standard controls so visitors can unmute.
+             The CSS in .video-wrap iframe absolutely positions and fills this 9:16 frame. -->
+        <iframe src="https://player.vimeo.com/video/1197583544?autoplay=1&loop=1&muted=1&autopause=0&app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Storm Damage Experts — Ideal Roof & Exterior Pros"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── HOW IT WORKS ───────────── -->
+<section class="steps">
+  <div class="container">
+    <div class="section-eyebrow reveal">How it works</div>
+    <h2 class="section-title reveal">From storm to new roof — without the headache.</h2>
+    <p class="section-sub reveal">Most homeowners don't realize hail damage is there until it leaks. We make the whole process simple.</p>
+
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <h3>Free roof inspection</h3>
+        <p>We climb up and document every dent, bruise, and granule loss with photos — the evidence your insurer needs. No cost, no obligation.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <h3>We meet your adjuster</h3>
+        <p>We file the claim with you and stand on the roof with your insurance adjuster, so nothing legitimate gets missed or denied.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <h3>You pay your deductible</h3>
+        <p>Once the claim is approved, insurance covers the replacement. You pay only your deductible — and get a premium Owens Corning roof.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── DIFFERENTIATORS ───────────── -->
+<section class="diff">
+  <div class="container">
+    <div class="section-eyebrow reveal">Why Fort Morgan homeowners choose us</div>
+    <h2 class="section-title reveal">Storm-damage experts serving Fort Morgan, CO.</h2>
+
+    <div class="diff-grid">
+      <div class="diff-card reveal">
+        <img class="diff-logo" loading="lazy" alt="Owens Corning Platinum Preferred Contractor" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/6966c90d-cf61-4f78-84ff-a6263afd5912/PPC_0c100m81y4k_withPanther+copy.png?content-type=image%2Fpng">
+        <h3>Owens Corning Platinum Preferred</h3>
+        <p>Top 1% of roofers nationwide. That tier unlocks the strongest manufacturer warranties — and means your roof is installed to exact spec, not by a crew passing through after the storm.</p>
+      </div>
+      <div class="diff-card reveal">
+        <div class="diff-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        </div>
+        <h3>Catch-all property protection</h3>
+        <p>When we tear off a roof, we protect everything below it — landscaping, AC units, windows, siding. A full catch-all system means nails and debris never touch your yard.</p>
+      </div>
+      <div class="diff-card reveal">
+        <div class="diff-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3>On-site project supervisor</h3>
+        <p>A real person from our team is on your property the entire job — not a salesman who disappears after the contract is signed. Licensed, accountable, and here long after the work is done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── BOOKING / CALENDLY ───────────── -->
+<section class="book" id="book">
+  <div class="container">
+    <div class="section-eyebrow reveal">Schedule your free inspection</div>
+    <h2 class="section-title reveal">Pick a time. We'll check your roof.</h2>
+    <p class="section-sub reveal">Pick any time that works — we'll confirm your exact appointment around our scheduled Fort Morgan inspection trips. Usually 30–45 minutes on-site.</p>
+
+    <div class="booking-card reveal">
+      <!-- Calendly inline widget — wired to the roof / property inspection (hail, wind, insurance) event.
+           primary_color=e1b654 matches brand gold. -->
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/idealsalesteam/roof-property-inspection-hail-wind-insurance?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=e1b654"
+           style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── BACKUP LEAD FORM ───────────── -->
+<section class="form-section">
+  <div class="container">
+    <div class="form-card reveal">
+      <div class="form-copy">
+        <h2>Rather have us call you?</h2>
+        <p>Drop your info and we'll call within one business hour to schedule your free inspection — no obligation, no high-pressure sales pitch.</p>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Free, no-obligation inspection
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            We handle the insurance paperwork
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Serving Fort Morgan, CO & the area
+          </li>
+        </ul>
+      </div>
+
+      <!-- ============ REPLACE WEBHOOK_URL ============
+           Pushes leads into JobNimbus via a Zapier webhook. See jobnimbus-integration-setup.md.
+           ============================================== -->
+      <form class="lead-form" id="lead-form" action="https://hooks.zapier.com/hooks/catch/11818737/4briloh/" method="POST">
+        <div class="form-row">
+          <label>
+            <span class="label-text">First name</span>
+            <input name="first_name" type="text" autocomplete="given-name" placeholder="Jane" required>
+          </label>
+          <label>
+            <span class="label-text">Last name</span>
+            <input name="last_name" type="text" autocomplete="family-name" placeholder="Smith" required>
+          </label>
+        </div>
+        <label>
+          <span class="label-text">Phone number</span>
+          <input name="phone" type="tel" autocomplete="tel" placeholder="(303) 555-0123" required>
+        </label>
+        <!-- Hidden fields for CRM tagging + campaign attribution -->
+        <input type="hidden" name="lead_source" value="Meta Ads">
+        <input type="hidden" name="lead_type" value="Storm / Hail Damage — Fort Morgan CO">
+        <input type="hidden" name="source_detail" value="ads-fortmorgan-hail-lp">
+        <input type="hidden" name="utm_source" id="utm_source" value="">
+        <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
+        <input type="hidden" name="utm_creative" id="utm_creative" value="">
+        <button type="submit">Get My Free Inspection →</button>
+        <div class="form-fineprint">By submitting, you agree we may contact you about your project. We never sell your info.</div>
+        <div class="form-success" id="form-success">
+          ✓ Got it. We'll call you within one business hour.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── TEAM ───────────── -->
+<section class="team">
+  <div class="container">
+    <div class="section-eyebrow reveal">Meet the crew</div>
+    <h2 class="section-title reveal">The team behind the reputation.</h2>
+    <p class="section-sub reveal">Real, local people you'll actually work with — on your roof and in your corner.</p>
+    <div class="team-row reveal">
+      <figure class="team-member">
+        <img class="team-photo" loading="lazy" alt="Christina Fairbanks" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/d14fd211-98fa-4b3e-87cc-908f151b284a/DSC08839.jpg?content-type=image%2Fjpeg">
+        <figcaption><span class="team-name">Christina Fairbanks</span><span class="team-role">Office Manager</span></figcaption>
+      </figure>
+      <figure class="team-member">
+        <img class="team-photo" loading="lazy" alt="Terrance Bunch" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/82e5811c-4e31-4c48-8b2d-385a9c0ef007/DSC09053.jpg?content-type=image%2Fjpeg">
+        <figcaption><span class="team-name">Terrance Bunch</span><span class="team-role">Project Consultant</span></figcaption>
+      </figure>
+      <figure class="team-member">
+        <img class="team-photo" loading="lazy" alt="Jake Fairbanks" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/6c117aa7-82e8-4a57-a44a-380570c2f9f2/DSC09038.jpg?content-type=image%2Fjpeg">
+        <figcaption><span class="team-name">Jake Fairbanks</span><span class="team-role">Owner</span></figcaption>
+      </figure>
+      <figure class="team-member">
+        <img class="team-photo" loading="lazy" alt="Aaron Caldwell" src="https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/97eff6b6-62e3-4a01-a779-ba9e3657698f/DSC09064.jpg?content-type=image%2Fjpeg">
+        <figcaption><span class="team-name">Aaron Caldwell</span><span class="team-role">On-Site Supervisor</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── REVIEWS (animated wall — real Google reviews) ───────────── -->
+<section class="reviews">
+  <div class="container">
+    <div class="section-eyebrow reveal">Real reviews from real neighbors</div>
+    <h2 class="section-title reveal">Hundreds of Colorado roofs.<br><span style="color:var(--gold-text)">Hundreds of relieved homeowners.</span></h2>
+    <div class="rv-meta reveal"><span class="rv-stars-xl">★★★★★</span><span class="rv-meta-txt"><strong>4.9</strong> on Google · <strong>170+</strong> verified reviews · hover to pause</span></div>
+  </div>
+  <div class="reviews-wall reveal" aria-label="Customer reviews">
+    <div class="wall-col"><div class="wall-track">
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Another company said our roof needed replacing. The insurance disagreed, so Jake came to reassess — turned out it had damage but not worth replacing. He made minor repairs for free. All I wanted was honesty. You should call him first too.</p>
+          <figcaption><span class="rv-av">M</span>Matt Forbes<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Full tear-off with Owens Corning Storm shingles. As a Platinum Preferred Contractor they brought that quality to every step, and coordinated directly with our insurance adjuster, which simplified the claims process. A year out it&#x27;s held up through storms and high winds with no issues.</p>
+          <figcaption><span class="rv-av">C</span>Cao House<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Ideal did a great job with our hail claim. Everything was explained — from the insurance details to the schedule to the work. I&#x27;ll use them again if another hail storm hits.</p>
+          <figcaption><span class="rv-av">M</span>Mike Maguire<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Jake came recommended by neighbors who had their roofs done after the July 4th storm. He helped us through the insurance and the HOA. The roof was finished in a day and looks great. Easy process!</p>
+          <figcaption><span class="rv-av">B</span>Brenda Neil<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Seamless experience. They handled everything with the insurance company and the whole process was easy. Roof looks great and it went as smoothly as possible.</p>
+          <figcaption><span class="rv-av">J</span>Jake Conger<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Another company said our roof needed replacing. The insurance disagreed, so Jake came to reassess — turned out it had damage but not worth replacing. He made minor repairs for free. All I wanted was honesty. You should call him first too.</p>
+          <figcaption><span class="rv-av">M</span>Matt Forbes<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Full tear-off with Owens Corning Storm shingles. As a Platinum Preferred Contractor they brought that quality to every step, and coordinated directly with our insurance adjuster, which simplified the claims process. A year out it&#x27;s held up through storms and high winds with no issues.</p>
+          <figcaption><span class="rv-av">C</span>Cao House<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Ideal did a great job with our hail claim. Everything was explained — from the insurance details to the schedule to the work. I&#x27;ll use them again if another hail storm hits.</p>
+          <figcaption><span class="rv-av">M</span>Mike Maguire<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Jake came recommended by neighbors who had their roofs done after the July 4th storm. He helped us through the insurance and the HOA. The roof was finished in a day and looks great. Easy process!</p>
+          <figcaption><span class="rv-av">B</span>Brenda Neil<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Seamless experience. They handled everything with the insurance company and the whole process was easy. Roof looks great and it went as smoothly as possible.</p>
+          <figcaption><span class="rv-av">J</span>Jake Conger<span class="rv-src">· Google</span></figcaption>
+        </figure>
+    </div></div>
+    <div class="wall-col"><div class="wall-track">
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Jake took the time to explain the entire insurance process and kept me informed as the work progressed. Would definitely recommend and use again.</p>
+          <figcaption><span class="rv-av">D</span>Doug Barnes<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Sasa communicated and set expectations the whole way through. He dealt with my insurance company efficiently and got us exactly what we needed. Thank you Sasa and Ideal!</p>
+          <figcaption><span class="rv-av">B</span>Brandon Ridder<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Ideal replaced my hail-damaged roof and gutters and installed new skylights. Crews were skilled and efficient, work was completed on time. Jake, Tyler, and Chris went above and beyond to make sure I was pleased.</p>
+          <figcaption><span class="rv-av">B</span>Barbara Butler<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>They walked me through the entire process, constantly checking in. Not one single issue — from inspection to insurance claims assistance to the actual repairs. Great company and people.</p>
+          <figcaption><span class="rv-av">D</span>Derek Gulley<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Replaced our roof and other repairs caused by hail. Great company — honest and reliable. Will definitely use again and refer to family and friends.</p>
+          <figcaption><span class="rv-av">D</span>Doc Dawg<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Jake took the time to explain the entire insurance process and kept me informed as the work progressed. Would definitely recommend and use again.</p>
+          <figcaption><span class="rv-av">D</span>Doug Barnes<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Sasa communicated and set expectations the whole way through. He dealt with my insurance company efficiently and got us exactly what we needed. Thank you Sasa and Ideal!</p>
+          <figcaption><span class="rv-av">B</span>Brandon Ridder<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Ideal replaced my hail-damaged roof and gutters and installed new skylights. Crews were skilled and efficient, work was completed on time. Jake, Tyler, and Chris went above and beyond to make sure I was pleased.</p>
+          <figcaption><span class="rv-av">B</span>Barbara Butler<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>They walked me through the entire process, constantly checking in. Not one single issue — from inspection to insurance claims assistance to the actual repairs. Great company and people.</p>
+          <figcaption><span class="rv-av">D</span>Derek Gulley<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Replaced our roof and other repairs caused by hail. Great company — honest and reliable. Will definitely use again and refer to family and friends.</p>
+          <figcaption><span class="rv-av">D</span>Doc Dawg<span class="rv-src">· Google</span></figcaption>
+        </figure>
+    </div></div>
+    <div class="wall-col"><div class="wall-track">
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>We hired Jake and his team for a full roof replacement after last year&#x27;s hail storm. Couldn&#x27;t be more pleased with the results and the service. If another devastating storm hits, we&#x27;d use Ideal again in a heartbeat.</p>
+          <figcaption><span class="rv-av">A</span>Alexa Parnell<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Friendly, great communication, flexible with my schedule, and they finished ahead of schedule. They did a great job working with my insurance company to make sure everything that needed to be done was covered.</p>
+          <figcaption><span class="rv-av">N</span>Nicolette Castillo<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Excellent customer service through our roofing, gutter, and siding storm repair. Their expertise, insights, and follow-up were all top notch. Jake, Alex, and Tyler were great.</p>
+          <figcaption><span class="rv-av">M</span>Matthew McLaughlin<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>We had a great experience with everyone at Ideal. They were so helpful navigating the process and working with our insurance. Great communication and overall very smooth.</p>
+          <figcaption><span class="rv-av">B</span>B Jax<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Kris and his team replaced our roof after a destructive spring hail storm. They did a great job, were efficient, and communication was easy.</p>
+          <figcaption><span class="rv-av">L</span>Laura Zerbe<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>We hired Jake and his team for a full roof replacement after last year&#x27;s hail storm. Couldn&#x27;t be more pleased with the results and the service. If another devastating storm hits, we&#x27;d use Ideal again in a heartbeat.</p>
+          <figcaption><span class="rv-av">A</span>Alexa Parnell<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Friendly, great communication, flexible with my schedule, and they finished ahead of schedule. They did a great job working with my insurance company to make sure everything that needed to be done was covered.</p>
+          <figcaption><span class="rv-av">N</span>Nicolette Castillo<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Excellent customer service through our roofing, gutter, and siding storm repair. Their expertise, insights, and follow-up were all top notch. Jake, Alex, and Tyler were great.</p>
+          <figcaption><span class="rv-av">M</span>Matthew McLaughlin<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>We had a great experience with everyone at Ideal. They were so helpful navigating the process and working with our insurance. Great communication and overall very smooth.</p>
+          <figcaption><span class="rv-av">B</span>B Jax<span class="rv-src">· Google</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <div class="rv-top"><span class="rv-stars">★★★★★</span><svg class="rv-g" viewBox="0 0 24 24" aria-label="Google"><path d="M12 11v2.8h4a3.9 3.9 0 0 1-1.7 2.5l2.7 2.1c1.6-1.5 2.5-3.6 2.5-6.2 0-.6-.05-1.2-.15-1.7H12z" fill="#4285F4"/><path d="M6.5 14.3l-.6.5-2.1 1.6A8 8 0 0 0 12 20c2.2 0 4-.7 5.3-2l-2.7-2.1c-.7.5-1.7.8-2.6.8-2 0-3.7-1.4-4.3-3.2z" fill="#34A853"/><path d="M3.8 8a8 8 0 0 0 0 7.2l2.7-2.1A4.8 4.8 0 0 1 6.2 12c0-.5.1-1 .3-1.5z" fill="#FBBC05"/><path d="M12 7.2c1.1 0 2.1.4 2.9 1.1l2.2-2.2A8 8 0 0 0 3.8 8l2.7 2.1C7.1 8.4 8.8 7.2 12 7.2z" fill="#EA4335"/></svg></div>
+          <p>Kris and his team replaced our roof after a destructive spring hail storm. They did a great job, were efficient, and communication was easy.</p>
+          <figcaption><span class="rv-av">L</span>Laura Zerbe<span class="rv-src">· Google</span></figcaption>
+        </figure>
+    </div></div>
+  </div>
+</section>
+
+<!-- ───────────── FOOTER ───────────── -->
+<footer>
+  <div class="container">
+    <div>Ideal Roof &amp; Exterior Pros · Serving Fort Morgan, CO · <a href="tel:+17203165455" style="color:var(--gold);text-decoration:underline;">(720) 316-5455</a></div>
+    <div class="small">Owens Corning Platinum Preferred · Licensed &amp; Insured · We are not a public adjuster or law firm; we assist with the insurance process and you are free to choose your own contractor.</div>
+    <div class="small" style="margin-top:10px;">
+      <a href="https://myidealpros.com/privacy-policy" target="_blank" rel="noopener" style="text-decoration:underline;">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="https://myidealpros.com/terms-and-conditions" target="_blank" rel="noopener" style="text-decoration:underline;">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ───────────── STICKY MOBILE CALL BAR ───────────── -->
+<div class="sticky-call" role="region" aria-label="Quick actions">
+  <div class="row">
+    <a class="call" href="tel:+17203165455" data-event="Contact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a class="book" href="#book">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Free Inspection
+    </a>
+  </div>
+</div>
+
+<script>
+  // ═══════════════════════════════════════════════════════════════════
+  // UTM-AWARE HEADLINE VARIANTS
+  // Pass ?v=hail, ?v=wind, etc. in the ad URL to swap the hero copy.
+  // ═══════════════════════════════════════════════════════════════════
+  const HEADLINE_VARIANTS = {
+    default: {
+      headline: `Hail Hit Fort Morgan? <span class="accent">We Handle the Insurance Claim.</span>`,
+      sub: `Serving Fort Morgan, CO. Free roof inspection — if you have hail or wind damage, we document it, meet your adjuster on-site, and manage the claim end-to-end — you pay only your deductible. Owens Corning Platinum Preferred.`
+    },
+    hail: {
+      headline: `Hail Hit Fort Morgan. <span class="accent">Did It Total Your Roof?</span>`,
+      sub: `Hail damage is hard to see from the ground — but your insurer will pay to replace a damaged roof. Free inspection, full claim handling, you pay only your deductible.`
+    },
+    wind: {
+      headline: `Missing Shingles After the Wind? <span class="accent">Your Insurance May Cover a New Roof.</span>`,
+      sub: `Wind damage qualifies for a claim just like hail. We inspect free, document everything, and handle the paperwork with your adjuster.`
+    },
+    deductible: {
+      headline: `A New Roof for <span class="accent">Just Your Deductible.</span>`,
+      sub: `If the storm damaged your roof, insurance covers the replacement. You cover the deductible — and we handle the entire claim. Free inspection to find out if you qualify.`
+    },
+    'storm-just-hit': {
+      headline: `Storm Just Hit Your Neighborhood? <span class="accent">Get Inspected First.</span>`,
+      sub: `Don't wait for a leak. We'll inspect your roof free, document any hail or wind damage, and tell you straight whether it's worth filing a claim.`
+    },
+    denied: {
+      headline: `Claim Denied or Underpaid? <span class="accent">Let's Take a Second Look.</span>`,
+      sub: `Insurers miss legitimate damage all the time. We re-inspect free, document what was missed, and work the claim with your adjuster. You pay only your deductible.`
+    }
+  };
+
+  (function applyVariant() {
+    const params = new URLSearchParams(window.location.search);
+    const v = (params.get('v') || params.get('variant') || params.get('creative') || 'default').toLowerCase();
+    const variant = HEADLINE_VARIANTS[v] || HEADLINE_VARIANTS.default;
+    const h = document.getElementById('hero-headline');
+    const s = document.getElementById('hero-sub');
+    if (h && variant.headline) h.innerHTML = variant.headline;
+    if (s && variant.sub) s.textContent = variant.sub;
+
+    document.getElementById('utm_source').value     = params.get('utm_source')   || params.get('source') || '';
+    document.getElementById('utm_campaign').value   = params.get('utm_campaign') || '';
+    document.getElementById('utm_creative').value   = params.get('utm_creative') || v;
+  })();
+
+  // META PIXEL — fire Contact on tap-to-call
+  document.querySelectorAll('[data-event="Contact"]').forEach(el => {
+    el.addEventListener('click', () => { if (window.fbq) fbq('track', 'Contact'); });
+  });
+
+  // META PIXEL — fire Schedule when someone books on Calendly
+  window.addEventListener('message', (e) => {
+    if (e.data && typeof e.data.event === 'string' && e.data.event.startsWith('calendly')) {
+      if (e.data.event === 'calendly.event_scheduled') { if (window.fbq) fbq('track', 'Schedule'); }
+    }
+  });
+
+  // LEAD FORM — POSTs JSON to webhook (Zapier → JobNimbus), fires Lead event
+  const form = document.getElementById('lead-form');
+  const success = document.getElementById('form-success');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const original = btn.textContent;
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      const fd = new FormData(form);
+      const payload = Object.fromEntries(fd.entries());
+      payload.submitted_at = new Date().toISOString();
+      payload.page_url     = window.location.href;
+      payload.referrer     = document.referrer || '';
+      // Send as form-urlencoded in no-cors mode: a "simple" request that avoids the CORS
+      // preflight (so Zapier parses each field by name) and the cross-origin response-read error.
+      await fetch(form.action, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(payload).toString()
+      });
+      form.style.display = 'none';
+      success.classList.add('show');
+      if (window.fbq) fbq('track', 'Lead');
+    } catch (err) {
+      btn.textContent = original;
+      btn.disabled = false;
+      alert('Sorry — something went wrong. Please call us directly at (720) 316-5455.');
+    }
+  });
+
+  // REVEAL ANIMATIONS on scroll (progressive enhancement)
+  document.documentElement.classList.add('js-enabled');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.in)').forEach((el) => el.classList.add('in'));
+    }, 2500);
+  } else {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
