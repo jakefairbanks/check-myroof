@@ -486,28 +486,44 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
   .diff-card p { color: var(--text-dim); margin: 0; font-size: 15px; line-height: 1.6; }
 
     /* ───────────── HERO OFFER (free upgrade callout) ───────────── */
-  .hero-offer {
+    .hero-offer {
+    position: relative; overflow: hidden;
     display: flex; align-items: center; gap: 14px;
-    max-width: 560px;
-    background: linear-gradient(135deg, #f7e0a4, var(--gold));
-    border: 1px solid var(--gold-deep);
-    border-radius: 14px;
-    padding: 12px 16px;
-    margin: 2px 0 22px;
-    box-shadow: 0 12px 28px rgba(201,154,40,.32);
+    max-width: 580px;
+    background: linear-gradient(135deg, #fcefc3 0%, var(--gold) 55%, var(--gold-deep) 100%);
+    border: 1.5px solid var(--gold-deep);
+    border-radius: 16px;
+    padding: 14px 18px;
+    margin: 4px 0 24px;
+    box-shadow: 0 14px 32px rgba(201,154,40,.42);
+    animation: heroOfferGlow 2.6s ease-in-out infinite;
   }
+  @keyframes heroOfferGlow {
+    0%,100% { box-shadow: 0 14px 30px rgba(201,154,40,.34); }
+    50%     { box-shadow: 0 16px 42px rgba(201,154,40,.62); }
+  }
+  .hero-offer::after {
+    content:""; position:absolute; top:0; left:-65%; width:45%; height:100%;
+    z-index: 0; pointer-events:none;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,.7), transparent);
+    transform: skewX(-18deg);
+    animation: heroOfferSheen 3.6s ease-in-out infinite;
+  }
+  @keyframes heroOfferSheen { 0%{left:-65%;} 55%{left:135%;} 100%{left:135%;} }
   .hero-offer-badge {
+    position: relative; z-index: 1;
     flex-shrink: 0;
     background: #1a1a1a; color: var(--gold);
     font-weight: 900; font-size: 15px; letter-spacing: .08em;
-    padding: 8px 13px; border-radius: 9px; text-transform: uppercase;
-    animation: heroOfferPulse 1.9s ease-in-out infinite;
+    padding: 9px 14px; border-radius: 10px; text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0,0,0,.3);
+    animation: heroOfferPulse 1.7s ease-in-out infinite;
   }
-  @keyframes heroOfferPulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.07);} }
-  .hero-offer-text { display: flex; flex-direction: column; line-height: 1.22; }
-  .hero-offer-text strong { font-size: 15.5px; font-weight: 800; color: #1a1a1a; letter-spacing: -.01em; }
-  .hero-offer-text span { font-size: 13px; color: rgba(26,26,26,.74); font-weight: 600; }
-  @media (prefers-reduced-motion: reduce) { .hero-offer-badge { animation: none; } }
+  @keyframes heroOfferPulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.09);} }
+  .hero-offer-text { position: relative; z-index: 1; display: flex; flex-direction: column; line-height: 1.22; }
+  .hero-offer-text strong { font-size: 16px; font-weight: 800; color: #1a1a1a; letter-spacing: -.01em; }
+  .hero-offer-text span { font-size: 13px; color: rgba(26,26,26,.78); font-weight: 600; }
+  @media (prefers-reduced-motion: reduce) { .hero-offer, .hero-offer-badge, .hero-offer::after { animation: none; } }
 
   /* ───────────── BOOKING SECTION ───────────── */
   section.book { padding: 72px 0 48px; }
@@ -810,7 +826,7 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
 <header class="topbar">
   <div class="container topbar-inner">
     <a href="#" class="logo" aria-label="Ideal Roof & Exterior Pros">
-      <img src="https://ideal-roof-exterior-pros-v1778276435.websitepro-cdn.com/wp-content/uploads/2026/02/logo-transparency-4-copy.png"
+      <img src="https://ideal-roof-exterior-pros-v1781529882.websitepro-cdn.com/wp-content/uploads/2026/02/logo-transparency-4-1-copy-1.png"
            alt="Ideal Roof & Exterior Pros"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <span class="logo-fallback" style="display:none;">
