@@ -268,9 +268,9 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
      (On mobile the CTAs already sit directly under the video, so it's hidden.) */
   .cta-arrow {
     position: absolute;
-    left: 38%;
-    bottom: 11%;
-    width: clamp(180px, 16vw, 230px);
+    left: 47%;
+    bottom: 1%;
+    width: clamp(195px, 17.5vw, 222px);
     z-index: 7;
     pointer-events: none;
     animation: ctaArrowBob 1.9s ease-in-out infinite;
@@ -278,7 +278,7 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
   .cta-arrow svg { width: 100%; height: auto; display: block; overflow: visible; filter: drop-shadow(0 3px 5px rgba(201,154,40,.35)); }
   .cta-arrow-cap {
     position: absolute;
-    top: -6px; right: 2px;
+    top: 44px; left: -16px;
     font-size: 15.5px;
     font-weight: 800;
     color: var(--gold-text);
@@ -937,10 +937,10 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
     <!-- Desktop-only cue: the video tells viewers the CTAs are "below," but on desktop they're to the left. -->
     <div class="cta-arrow" aria-hidden="true">
       <span class="cta-arrow-cap">Book or call right here</span>
-      <svg viewBox="0 0 230 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M206 20 C 156 6, 92 22, 78 80 C 72 104, 66 116, 50 128"
+      <svg viewBox="0 0 210 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M196 204 C 150 150, 150 96, 108 80"
               stroke="#9C7A1F" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M50 128 L70 124 M50 128 L56 107"
+        <path d="M108 80 L130 74 M108 80 L122 98"
               stroke="#9C7A1F" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
