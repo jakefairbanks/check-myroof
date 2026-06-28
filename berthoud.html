@@ -264,6 +264,33 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
   }
   .hero-video { display: flex; justify-content: center; }
 
+  /* ── Desktop-only arrow: points from the video toward the CTA buttons ──
+     (On mobile the CTAs already sit directly under the video, so it's hidden.) */
+  .cta-arrow {
+    position: absolute;
+    left: 38%;
+    bottom: 11%;
+    width: clamp(180px, 16vw, 230px);
+    z-index: 7;
+    pointer-events: none;
+    animation: ctaArrowBob 1.9s ease-in-out infinite;
+  }
+  .cta-arrow svg { width: 100%; height: auto; display: block; overflow: visible; filter: drop-shadow(0 3px 5px rgba(201,154,40,.35)); }
+  .cta-arrow-cap {
+    position: absolute;
+    top: -6px; right: 2px;
+    font-size: 15.5px;
+    font-weight: 800;
+    color: var(--gold-text);
+    white-space: nowrap;
+    transform: rotate(-5deg);
+    text-shadow: 0 1px 0 rgba(255,255,255,.7);
+  }
+  @keyframes ctaArrowBob { 0%,100% { transform: translateX(0); } 50% { transform: translateX(-9px); } }
+  @media (prefers-reduced-motion: reduce) { .cta-arrow { animation: none; } }
+  /* Hidden whenever the layout stacks (CTAs already under the video) */
+  @media (max-width: 920px) { .cta-arrow { display: none; } }
+
   .eyebrow {
     display: inline-flex;
     align-items: center;
@@ -825,7 +852,7 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
 <!-- ───────────── STICKY HEADER ───────────── -->
 <header class="topbar">
   <div class="container topbar-inner">
-    <a href="#" class="logo" aria-label="Ideal Roof & Exterior Pros">
+    <a href="https://www.google.com/maps?cid=1632221881571773114" target="_blank" rel="noopener noreferrer" class="logo" aria-label="Ideal Roof & Exterior Pros — read our 5-star Google reviews">
       <img src="https://ideal-roof-exterior-pros-v1781529882.websitepro-cdn.com/wp-content/uploads/2026/02/logo-transparency-4-1-copy-1.png"
            alt="Ideal Roof & Exterior Pros"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -905,6 +932,17 @@ src="https://www.facebook.com/tr?id=548401943404976&ev=PageView&noscript=1"/></n
                 referrerpolicy="strict-origin-when-cross-origin"
                 title="Berthoud Hail Damage — Ideal Roof & Exterior Pros"></iframe>
       </div>
+    </div>
+
+    <!-- Desktop-only cue: the video tells viewers the CTAs are "below," but on desktop they're to the left. -->
+    <div class="cta-arrow" aria-hidden="true">
+      <span class="cta-arrow-cap">Book or call right here</span>
+      <svg viewBox="0 0 230 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M206 20 C 156 6, 92 22, 78 80 C 72 104, 66 116, 50 128"
+              stroke="#9C7A1F" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M50 128 L70 124 M50 128 L56 107"
+              stroke="#9C7A1F" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </div>
   </div>
 </section>
