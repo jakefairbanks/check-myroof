@@ -153,6 +153,7 @@ const I = {
   check: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>`,
   checkCircle: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>`,
   house: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>`,
+  family: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
   person: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
   hail: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 17a4.5 4.5 0 1 0-1-8.9A6 6 0 0 0 5 9.5a3.5 3.5 0 0 0 .5 7"/><circle cx="8" cy="20" r="1"/><circle cx="12" cy="21" r="1"/><circle cx="16" cy="20" r="1"/></svg>`,
   clock: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>`,
@@ -394,29 +395,65 @@ function steps() {
 
 function why(page) {
   return `
-<section class="section on-dark">
+<section class="section on-dark why">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow reveal">Why homeowners pick us</div>
+      <div class="eyebrow reveal">Why homeowners choose us</div>
       <h2 class="section-title reveal silver-text">${page.whyTitle}</h2>
       <p class="section-sub reveal">After a hailstorm, your doorbell gets hit as hard as your roof. Here’s what separates us from the trucks that showed up from out of state.</p>
     </div>
-    <div class="diff-grid">
-      <div class="diff-card reveal">
-        <img class="diff-logo" loading="lazy" alt="Owens Corning Platinum Preferred Contractor" src="${SITE.ocPlatinumLogo}">
-        <h3>Owens Corning Platinum Preferred</h3>
-        <p>Top 1% of roofers nationwide. That tier is what unlocks the Platinum warranty — and it means your roof is installed to exact spec by a vetted company, not a crew passing through after the storm.</p>
-      </div>
-      <div class="diff-card reveal">
-        <div class="diff-icon">${I.house}</div>
-        <h3>Catch-all property protection</h3>
-        <p>When we tear off a roof, we protect everything below it — landscaping, AC units, windows, siding. Our catch-all system means nails and debris never touch your yard.</p>
-      </div>
-      <div class="diff-card reveal">
-        <div class="diff-icon">${I.person}</div>
-        <h3>On-site project supervisor</h3>
-        <p>A real person from our team is on your property for the entire job — not a salesman who disappears after the contract is signed. Local, licensed, and here long after the work is done.</p>
-      </div>
+
+    <div class="why-grid">
+      <figure class="why-photo reveal">
+        <picture>
+          <source srcset="/assets/catchall.webp" type="image/webp">
+          <img src="/assets/catchall.jpg" alt="Ideal crew mid tear-off with the catch-all property protection system wrapped around the home" width="900" height="1135" loading="lazy">
+        </picture>
+        <div class="why-callout" aria-hidden="true">
+          <svg class="why-arrow" viewBox="0 0 140 110" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M132 8 C 120 50, 90 80, 22 96" stroke-dasharray="5 6"/>
+            <path d="M34 86 L 20 97 L 36 102"/>
+          </svg>
+          <span class="why-pin"></span>
+        </div>
+        <figcaption class="why-caption">
+          <span class="why-caption-tag">Catch-all system in use</span>
+          <strong>Every tear-off, wrapped.</strong> Debris and nails land in the net — not your landscaping, siding, windows or AC unit.
+        </figcaption>
+        <span class="why-photo-badge">Real Ideal job site · Denver, CO</span>
+      </figure>
+
+      <ul class="why-list">
+        <li class="why-item reveal">
+          <div class="why-icon">${I.shield}</div>
+          <div class="why-body">
+            <h3>Owens Corning Platinum Preferred</h3>
+            <p>Top 1% of roofers nationwide. That tier is what unlocks the Platinum warranty, and it means your roof is installed to exact spec by a vetted company — not a crew passing through after the storm.</p>
+            <img class="why-oc" loading="lazy" alt="Owens Corning Platinum Preferred Contractor" src="${SITE.ocPlatinumLogo}">
+          </div>
+        </li>
+        <li class="why-item reveal">
+          <div class="why-icon">${I.person}</div>
+          <div class="why-body">
+            <h3>An on-site supervisor, every job</h3>
+            <p>A member of our team is on your property for the entire install — not a salesman who disappears after the contract is signed. Questions get answered on the spot, and the crew is held to our standard, not theirs.</p>
+          </div>
+        </li>
+        <li class="why-item reveal">
+          <div class="why-icon">${I.family}</div>
+          <div class="why-body">
+            <h3>Family-run, Denver-based</h3>
+            <p>Ideal is owned and run by the Fairbanks family. The name on the truck is the name that answers the phone — and the name that’s still here next storm season, ${SITE.yearsInBusiness} years in.</p>
+          </div>
+        </li>
+        <li class="why-item reveal">
+          <div class="why-icon">${I.house}</div>
+          <div class="why-body">
+            <h3>Catch-all property protection</h3>
+            <p>Before the first shingle comes off, we wrap your home in a catch-all system so landscaping, AC units, windows and siding never see a nail. That’s it in the photo.</p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

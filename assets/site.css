@@ -408,6 +408,31 @@ section { position: relative; }
 .diff-card h3 { font-size: 20px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 10px; color: #fff; }
 .diff-card p { color: var(--text-on-dark-dim); font-size: 15.5px; line-height: 1.6; }
 
+/* ───────────── WHY (photo + proof list) ───────────── */
+.why-grid { display: grid; grid-template-columns: minmax(300px, .9fr) 1.1fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
+.why-photo { position: relative; margin: 0; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--line-on-dark-strong); box-shadow: 0 40px 90px rgba(0,0,0,.55), 0 0 0 8px rgba(255,255,255,.03); background: #000; }
+.why-photo img { width: 100%; height: auto; display: block; filter: saturate(.9) contrast(1.04); }
+.why-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(17,17,17,0) 45%, rgba(17,17,17,.88) 100%); pointer-events: none; }
+.why-callout { position: absolute; left: 36%; top: 37%; width: 30%; color: var(--gold); z-index: 2; filter: drop-shadow(0 2px 6px rgba(0,0,0,.6)); }
+.why-arrow { width: 100%; height: auto; overflow: visible; }
+.why-pin { position: absolute; right: 0; top: 0; transform: translate(50%, -50%); width: 14px; height: 14px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 6px rgba(202,153,55,.28), 0 0 0 1px rgba(0,0,0,.4); animation: pinPulse 2.2s ease-out infinite; }
+@keyframes pinPulse { 0% { box-shadow: 0 0 0 4px rgba(202,153,55,.4); } 70% { box-shadow: 0 0 0 16px rgba(202,153,55,0); } 100% { box-shadow: 0 0 0 16px rgba(202,153,55,0); } }
+.why-caption { position: absolute; left: 18px; right: 18px; bottom: 18px; z-index: 3; color: var(--text-on-dark-dim); font-size: 14.5px; line-height: 1.5; padding: 14px 16px; border-radius: 14px; background: rgba(17,17,17,.72); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.12); }
+.why-caption strong { color: #fff; font-weight: 600; }
+.why-caption-tag { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.why-caption-tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+.why-photo-badge { position: absolute; top: 16px; left: 16px; z-index: 3; font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: rgba(17,17,17,.6); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.14); padding: 7px 10px; border-radius: 999px; }
+.why-list { display: grid; gap: 12px; }
+.why-item { position: relative; display: grid; grid-template-columns: 52px 1fr; gap: 18px; align-items: start; padding: 22px 24px; border-radius: 18px; background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border: 1px solid var(--line-on-dark); transition: border-color .35s var(--ease), transform .35s var(--ease); }
+.why-item:hover { border-color: rgba(202,153,55,.45); transform: translateX(4px); }
+.why-icon { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--gold-soft); border: 1px solid rgba(202,153,55,.3); }
+.why-icon svg { width: 24px; height: 24px; color: var(--gold); }
+.why-item h3 { font-size: 19px; font-weight: 800; letter-spacing: -.02em; color: #fff; margin-bottom: 8px; }
+.why-item p { color: var(--text-on-dark-dim); font-size: 15px; line-height: 1.6; }
+.why-oc { height: 40px; width: auto; background: #fff; padding: 5px 8px; border-radius: 8px; margin-top: 14px; }
+@media (max-width: 900px) { .why-grid { grid-template-columns: 1fr; } .why-photo { width: 100%; max-width: 560px; margin: 0 auto; } }
+@media (max-width: 768px) { .why-item { grid-template-columns: 44px 1fr; gap: 14px; padding: 18px 18px; } .why-icon { width: 44px; height: 44px; border-radius: 12px; } .why-icon svg { width: 21px; height: 21px; } .why-item h3 { font-size: 17px; } .why-caption { font-size: 13.5px; left: 12px; right: 12px; bottom: 12px; padding: 12px 13px; } }
+
 /* ───────────── BOOKING ───────────── */
 .booking-card {
   background: #fff; border: 1px solid var(--paper-line); border-radius: var(--radius-lg);
