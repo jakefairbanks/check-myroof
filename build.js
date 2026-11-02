@@ -10,6 +10,11 @@
  */
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
+// Content hash for cache-busting: /assets/site.css?v=abc123 changes whenever the file changes.
+const ver = (file) => crypto.createHash('md5').update(fs.readFileSync(path.join(__dirname, 'assets', file))).digest('hex').slice(0, 8);
+const CSS_V = ver('site.css');
+const JS_V = ver('site.js');
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Global config
@@ -190,7 +195,7 @@ function head(page) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="/assets/hero.webp" type="image/webp">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=${CSS_V}">
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 ${gtag}
 <!-- Meta Pixel -->
@@ -646,7 +651,7 @@ function scripts(page) {
   };
   return `
 <script>window.PAGE = ${JSON.stringify(cfg)};</script>
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v=${JS_V}" defer></script>
 </body>
 </html>
 `;
