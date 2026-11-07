@@ -342,25 +342,14 @@ function hero(page) {
         </nav>
 ${PROMO.enabled ? `
         <div class="offer-stack" id="promo" aria-label="Year-end offer">
-          <div class="promo-head">
-            <span class="promo-title"><span class="promo-dot"></span><span>Year-end offer · <span class="promo-value">${PROMO.value}</span> in complimentary upgrades</span></span>
-            <span class="promo-dates">Offer ends <strong>${PROMO.endsLong}</strong> · Install ${PROMO.install}</span>
+          <div class="offer-pill promo-card">
+            <span class="tag">FREE<small>UPGRADES</small></span>
+            <span>
+              <span class="promo-kicker">Year-end offer · Ends ${PROMO.endsLong}</span>
+              <span class="t">Class 4 Shingles + Platinum Protection Warranty</span>
+              <span class="d"><em>${PROMO.value} in complimentary upgrades</em> on your roof replacement. Sign by ${PROMO.endsShort}, install ${PROMO.install}. <a href="#promo-terms">*Terms</a></span>
+            </span>
           </div>
-          <a href="#book" class="offer-pill">
-            <span class="tag">FREE<small>UPGRADE</small></span>
-            <span>
-              <span class="t">Class 4 Impact-Resistant Shingles</span>
-              <span class="d">Owens Corning impact-rated shingles at no added charge — <em>built for Colorado hail.</em></span>
-            </span>
-          </a>
-          <a href="#book" class="offer-pill">
-            <span class="tag">FREE<small>UPGRADE</small></span>
-            <span>
-              <span class="t">Platinum Protection Warranty</span>
-              <span class="d">25 years of workmanship coverage <em>backed by Owens Corning.*</em></span>
-            </span>
-          </a>
-          <p class="promo-fine">Sign your roofing agreement by ${PROMO.endsLong} to lock in the upgrades, even if you’re planning to replace next spring. <a href="#promo-terms">*Terms</a></p>
         </div>` : ''}
 
         <div class="hero-actions">

@@ -584,6 +584,11 @@ a.urgency-band:hover { background: var(--gold-light); }
 .promo-fine a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 #promo-terms { margin-top: 10px; }
 .offer-stack .offer-pill { border-color: rgba(202,153,55,.32); }
+.promo-card { align-items: center; }
+.promo-card:hover { transform: none; }
+.promo-kicker { display: block; margin-bottom: 4px; font-family: var(--font-display); font-size: 10.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.promo-card .d a { color: var(--text-on-dark-muted); text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+@media (max-width: 560px) { .promo-card.offer-pill { grid-template-columns: 1fr; gap: 10px; padding: 14px 16px; } .promo-card .tag { width: max-content; flex-direction: row; gap: 6px; align-items: baseline; } }
 
 /* Mobile hero order: headline → video → offer → services → CTAs.
    Keeps Jake's video near the top on phones even with the promo in the hero. */
