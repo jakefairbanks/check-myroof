@@ -71,23 +71,37 @@
     });
   }
 
-  // ── Hero video: unmute + restart from the top on tap (Vimeo player.js)
+  // ── Hero video: tap to restart with sound (Vimeo player.js). Button always mirrors the player's real mute state.
   const soundBtn = document.getElementById('video-sound');
   const vimeoEl = document.getElementById('hero-vimeo');
   if (soundBtn && vimeoEl) {
     let player = null;
-    const getPlayer = () => (player = player || (window.Vimeo ? new Vimeo.Player(vimeoEl) : null));
+    const lbl = soundBtn.querySelector('.lbl');
+    const render = (muted) => { soundBtn.setAttribute('aria-pressed', String(!muted)); lbl.textContent = muted ? 'Play with sound' : 'Mute'; };
+    const getPlayer = () => {
+      if (!player && window.Vimeo) {
+        player = new Vimeo.Player(vimeoEl);
+        player.on('volumechange', (d) => render(d.volume === 0)); // also catches Vimeo's own Unmute badge
+        player.getMuted().then(render).catch(() => {});
+      }
+      return player;
+    };
+    window.addEventListener('load', getPlayer);
     soundBtn.addEventListener('click', async () => {
       const p = getPlayer(); if (!p) return;
-      const on = soundBtn.getAttribute('aria-pressed') === 'true';
-      try {
-        if (on) { await p.setMuted(true); soundBtn.setAttribute('aria-pressed', 'false'); soundBtn.querySelector('.lbl').textContent = 'Play with sound'; }
-        else {
-          await p.setCurrentTime(0); await p.setMuted(false); await p.setVolume(1); await p.play();
-          soundBtn.setAttribute('aria-pressed', 'true'); soundBtn.querySelector('.lbl').textContent = 'Mute';
-          if (window.fbq) fbq('trackCustom', 'VideoSoundOn');
-        }
-      } catch (e) { /* autoplay policy edge cases: leave Vimeo's own controls as fallback */ }
+      let muted = true;
+      try { muted = await p.getMuted(); } catch (e) {}
+      if (muted) {
+        // Unmute first, synchronously inside the tap, so the browser credits the user gesture.
+        p.setMuted(false).catch(() => {});
+        p.setVolume(1).catch(() => {});
+        p.setCurrentTime(0).catch(() => {});
+        p.play().catch(() => {});
+        if (window.fbq) fbq('trackCustom', 'VideoSoundOn');
+      } else {
+        p.setMuted(true).catch(() => {});
+      }
+      setTimeout(() => p.getMuted().then(render).catch(() => {}), 400);
     });
   }
 
