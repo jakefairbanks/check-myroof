@@ -45,10 +45,9 @@ const SITE = {
 };
 
 const TEAM = [
+  { name: 'Jake Fairbanks',      role: 'Owner',               img: 'https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/6c117aa7-82e8-4a57-a44a-380570c2f9f2/DSC09038.jpg?content-type=image%2Fjpeg' },
   { name: 'Christina Fairbanks', role: 'Production & Operations',img: 'https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/d14fd211-98fa-4b3e-87cc-908f151b284a/DSC08839.jpg?content-type=image%2Fjpeg' },
   { name: 'Terrance Bunch',      role: 'Project Consultant',  img: 'https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/82e5811c-4e31-4c48-8b2d-385a9c0ef007/DSC09053.jpg?content-type=image%2Fjpeg' },
-  { name: 'Jake Fairbanks',      role: 'Owner',               img: 'https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/6c117aa7-82e8-4a57-a44a-380570c2f9f2/DSC09038.jpg?content-type=image%2Fjpeg' },
-  { name: 'Aaron Caldwell',      role: 'On-Site Supervisor',  img: 'https://images.squarespace-cdn.com/content/5fc52c5a1452f90b7f00ebfd/97eff6b6-62e3-4a01-a779-ba9e3657698f/DSC09064.jpg?content-type=image%2Fjpeg' },
 ];
 
 // Real Google reviews — verbatim text from myidealpros.com/reviews (service labels as tagged there),

@@ -489,7 +489,9 @@ section { position: relative; }
 .form-success.show { display: block; }
 
 /* ───────────── TEAM ───────────── */
-.team-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.team-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 900px; }
+/* Odd count on 2-col mobile: center the last card */
+@media (max-width: 900px) { .team-row > .team-member:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 6px); } }
 .team-member { margin: 0; position: relative; border-radius: var(--radius-lg); overflow: hidden; background: #fff; border: 1px solid var(--paper-line); box-shadow: var(--shadow-sm); }
 .team-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; filter: saturate(.95); transition: transform .6s var(--ease); }
 .team-member:hover .team-photo { transform: scale(1.03); }
