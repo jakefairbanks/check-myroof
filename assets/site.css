@@ -568,6 +568,37 @@ footer { background: var(--ink); color: var(--text-on-dark-muted); padding: 44px
 .sticky-call .call { color: #fff; border: 1.5px solid var(--line-on-dark-strong); }
 .sticky-call .book { color: var(--ink); background: linear-gradient(180deg, var(--gold-light), var(--gold) 55%, var(--gold-deep)); box-shadow: var(--shadow-gold); }
 
+/* ───────────── Promo (hero + band) ───────────── */
+a.urgency-band { display: block; transition: background .2s var(--ease); }
+a.urgency-band:hover { background: var(--gold-light); }
+.promo-head { display: grid; gap: 4px; margin-bottom: 4px; }
+.promo-title {
+  display: flex; align-items: baseline; gap: 10px;
+  font-family: var(--font-display); font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); line-height: 1.5;
+}
+.promo-value { color: #fff; }
+.promo-dates { font-size: 13.5px; color: var(--text-on-dark-muted); padding-left: 18px; }
+.promo-dates strong { color: #fff; font-weight: 600; }
+.promo-dot { position: relative; top: -1px; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(202,153,55,.25); flex: none; }
+.promo-fine { font-size: 13px; color: var(--text-on-dark-muted); line-height: 1.5; margin-top: 2px; }
+.promo-fine a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+#promo-terms { margin-top: 10px; }
+.offer-stack .offer-pill { border-color: rgba(202,153,55,.32); }
+
+/* Mobile hero order: headline → video → offer → services → CTAs.
+   Keeps Jake's video near the top on phones even with the promo in the hero. */
+@media (max-width: 900px) {
+  .hero-grid { gap: 0; }
+  .hero-copy { display: contents; }
+  .hero-copy > .eyebrow { order: 1; }
+  .hero-copy > .hero-headline { order: 2; }
+  .hero-copy > .hero-sub { order: 3; }
+  .hero-grid > .hero-video { order: 4; margin: 0 auto 30px; }
+  .hero-copy > .offer-stack { order: 5; }
+  .hero-copy > .svc-chips { order: 6; margin-top: 4px; }
+  .hero-copy > .hero-actions { order: 7; }
+}
+
 /* ───────────── Campaign mode (general vs. storm) ───────────── */
 html.campaign-general .only-storm { display: none !important; }
 html.campaign-storm .only-general { display: none !important; }

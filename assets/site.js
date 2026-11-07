@@ -24,8 +24,6 @@
     const set = (id, val) => { const el = document.getElementById(id); if (el) el.value = val; };
     const lt = document.getElementById('lead_type');
     if (lt) lt.value = storm ? lt.dataset.storm : lt.dataset.general;
-    const offer = document.getElementById('offer');
-    if (offer) offer.value = storm ? (offer.dataset.storm || '') : '';
     set('page_mode', storm ? 'storm' : 'general');
     set('utm_source',   params.get('utm_source')   || params.get('source') || '');
     set('utm_campaign', params.get('utm_campaign') || '');

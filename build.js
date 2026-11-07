@@ -85,12 +85,18 @@ const REVIEWS = [
 // ─────────────────────────────────────────────────────────────────────────────
 const STORM_VARIANTS = ['storm', 'hail', 'wind', 'deductible', 'storm-just-hit', 'denied'];
 
-// Current insurance-roof upgrade offer. Shown ONLY in storm mode.
-// ⚠ Needs Jake's sign-off on eligibility + end date before relying on it. Set enabled:false to hide everywhere.
+// Year-end offer — mirrors the fall 2026 direct-mail flyer word for word (Jake, Nov 7 2026).
+// Shown to EVERY visitor at the top of the page (flyer QR codes point to check-myroof.com).
+// After Dec 31, 2026 set enabled:false — the page falls back to the evergreen top band automatically.
 const PROMO = {
   enabled: true,
-  endsText: '',   // e.g. 'through Dec 31, 2026' — leave '' until confirmed
-  hiddenValue: 'Free Class 4 Duration FLEX + Platinum Warranty',
+  value: '$2,000–$4,000',
+  endsShort: 'Dec 31',
+  endsLong: 'December 31, 2026',
+  install: 'spring 2027',
+  // Flyer fine print, verbatim:
+  terms: 'Eligible roofing agreement must be signed by 12/31/2026; installation may be scheduled for spring 2027. Upgrades subject to product eligibility, applicable insurance deductible requirements and Owens Corning warranty terms. Deductibles are not waived; insurance approval not guaranteed.',
+  hiddenValue: 'Year-end offer 2026 (sign by 12/31/2026, install spring 2027): Class 4 shingles + Platinum Protection Warranty',
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -176,8 +182,8 @@ function variantsFor(page) {
     },
     deductible: {
       eyebrow: stormDefault.eyebrow,
-      headline: `Insurance Roof Coming Up? <span class="accent">Ask About Our Class 4 Upgrade.</span>`,
-      sub: `On qualifying insurance roof replacements, we’re currently upgrading to Owens Corning Duration FLEX® Class 4 shingles at no added cost. Start with a free inspection.`,
+      headline: `Your Spring Roof, With <span class="accent">${PROMO.value} in Complimentary Upgrades.</span>`,
+      sub: `Sign your roof replacement agreement by ${PROMO.endsLong} and we’ll include Owens Corning Class 4 shingles and the Platinum Protection Warranty, even if you install in ${PROMO.install}. Start with a free inspection.`,
     },
     'storm-just-hit': {
       eyebrow: stormDefault.eyebrow,
@@ -273,16 +279,20 @@ fbq('track', 'PageView');
 }
 
 function urgency(page) {
-  const promo = PROMO.enabled
-    ? ` Ask about our <strong>Class&nbsp;4 upgrade</strong> on qualifying insurance roofs${PROMO.endsText ? ` ${PROMO.endsText}` : ''}.`
-    : '';
+  if (PROMO.enabled) {
+    return `
+<a class="urgency-band promo-band" href="#promo">
+  <span class="long"><strong>Year-end offer:</strong> Sign by ${PROMO.endsLong} and get <strong>${PROMO.value} in complimentary roof upgrades</strong> — even if you’re planning to replace next spring.</span>
+  <span class="short"><strong>Year-end offer:</strong> ${PROMO.value} in free roof upgrades. Ends ${PROMO.endsShort}.</span>
+</a>`;
+  }
   return `
 <div class="urgency-band only-general">
   <span class="long">Free roof &amp; exterior inspections across <strong>Denver Metro &amp; Boulder</strong> — roofing, siding, painting, gutters, and storm restoration.</span>
   <span class="short">Free inspections across <strong>Denver Metro &amp; Boulder</strong>.</span>
 </div>
 <div class="urgency-band only-storm">
-  <span class="long"><strong>Storm just hit?</strong> Most policies set a deadline to file, so get inspected sooner rather than later.${promo}</span>
+  <span class="long"><strong>Storm just hit?</strong> Most policies set a deadline to file, so get inspected sooner rather than later.</span>
   <span class="short"><strong>Storm just hit?</strong> Get inspected before the filing window closes.</span>
 </div>`;
 }
@@ -330,6 +340,28 @@ function hero(page) {
           <a href="#services">Gutters</a>
           <a href="#insurance">Storm restoration</a>
         </nav>
+${PROMO.enabled ? `
+        <div class="offer-stack" id="promo" aria-label="Year-end offer">
+          <div class="promo-head">
+            <span class="promo-title"><span class="promo-dot"></span><span>Year-end offer · <span class="promo-value">${PROMO.value}</span> in complimentary upgrades</span></span>
+            <span class="promo-dates">Offer ends <strong>${PROMO.endsLong}</strong> · Install ${PROMO.install}</span>
+          </div>
+          <a href="#book" class="offer-pill">
+            <span class="tag">FREE<small>UPGRADE</small></span>
+            <span>
+              <span class="t">Class 4 Impact-Resistant Shingles</span>
+              <span class="d">Owens Corning impact-rated shingles at no added charge — <em>built for Colorado hail.</em></span>
+            </span>
+          </a>
+          <a href="#book" class="offer-pill">
+            <span class="tag">FREE<small>UPGRADE</small></span>
+            <span>
+              <span class="t">Platinum Protection Warranty</span>
+              <span class="d">25 years of workmanship coverage <em>backed by Owens Corning.*</em></span>
+            </span>
+          </a>
+          <p class="promo-fine">Sign your roofing agreement by ${PROMO.endsLong} to lock in the upgrades, even if you’re planning to replace next spring. <a href="#promo-terms">*Terms</a></p>
+        </div>` : ''}
 
         <div class="hero-actions">
           <div class="cta-row">
@@ -454,14 +486,7 @@ function services(page) {
 }
 
 function insurance(page) {
-  const promo = PROMO.enabled ? `
-    <div class="promo-callout only-storm reveal">
-      <span class="offer-badge">Current offer</span>
-      <div>
-        <strong>Class 4 shingle upgrade on qualifying insurance roofs${PROMO.endsText ? ` ${PROMO.endsText}` : ''}.</strong>
-        On insurance-approved full roof replacements we install, we’re upgrading to Owens Corning® Duration FLEX® Class 4 impact-resistant shingles and registering the Owens Corning® Platinum Protection warranty at no added cost. Ask us whether your project qualifies.
-      </div>
-    </div>` : '';
+
   return `
 <section class="section on-paper-2" id="insurance">
   <div class="container">
@@ -492,7 +517,6 @@ function insurance(page) {
         <p>We complete the approved repairs with a project supervisor on site, keep you updated as we go, and clean up when we’re done.</p>
       </div>
     </div>
-    ${promo}
     <div class="insurance-cta reveal">
       <a href="#book" class="btn btn-primary">${I.calendar} Book a Storm Damage Inspection</a>
       <span class="insurance-note">Free, no obligation. Photos of everything we find.</span>
@@ -623,7 +647,7 @@ function leadForm(page) {
         <input type="hidden" name="lead_type" id="lead_type" value="${esc(page.campaign === 'storm' ? page.leadType : page.leadType)}" data-general="${esc(page.leadType)}" data-storm="${esc(page.leadTypeStorm || page.leadType)}">
         <input type="hidden" name="source_detail" value="${page.sourceDetail}">
         <input type="hidden" name="page_mode" id="page_mode" value="${page.campaign}">
-        <input type="hidden" name="offer" id="offer" value="${page.campaign === 'storm' && PROMO.enabled ? esc(PROMO.hiddenValue) : ''}" data-storm="${PROMO.enabled ? esc(PROMO.hiddenValue) : ''}">
+        <input type="hidden" name="offer" id="offer" value="${PROMO.enabled ? esc(PROMO.hiddenValue) : ''}">
         <input type="hidden" name="utm_source" id="utm_source" value="">
         <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
         <input type="hidden" name="utm_creative" id="utm_creative" value="">
@@ -729,7 +753,7 @@ function finalCta(page) {
 
 function footer() {
   const promoLegal = PROMO.enabled
-    ? ` <span class="only-storm">Upgrade offer applies to qualifying insurance-approved full roof replacements installed by ${SITE.brand}${PROMO.endsText ? `, ${PROMO.endsText}` : ''}; ask us about eligibility.</span>`
+    ? `<div class="foot-legal" id="promo-terms"><strong>*Year-end offer:</strong> ${PROMO.terms}</div>`
     : '';
   return `
 <footer>
@@ -741,7 +765,8 @@ function footer() {
         <a href="https://myidealpros.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
         <a href="https://myidealpros.com/terms-and-conditions" target="_blank" rel="noopener">Terms &amp; Conditions</a>
       </div>
-      <div class="foot-legal">Owens Corning Platinum Preferred Contractor · Licensed &amp; insured. We are a roofing and exterior contractor, not a public adjuster or law firm. Insurance coverage decisions are made by your carrier, and you are free to choose your own contractor. Warranty coverage depends on the products installed and registration; see the Owens Corning® Platinum Protection Limited Warranty for complete terms.${promoLegal} Owens Corning®, Duration FLEX®, TruDefinition® and SureNail® are trademarks of Owens Corning. James Hardie® and LP® SmartSide® are trademarks of their respective owners.</div>
+      <div class="foot-legal">Owens Corning Platinum Preferred Contractor · Licensed &amp; insured. We are a roofing and exterior contractor, not a public adjuster or law firm. Insurance coverage decisions are made by your carrier, and you are free to choose your own contractor. Warranty coverage depends on the products installed and registration; see the Owens Corning® Platinum Protection Limited Warranty for complete terms. Owens Corning®, Duration FLEX®, TruDefinition® and SureNail® are trademarks of Owens Corning. James Hardie® and LP® SmartSide® are trademarks of their respective owners.</div>
+      ${promoLegal}
     </div>
   </div>
 </footer>
