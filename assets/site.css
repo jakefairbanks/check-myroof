@@ -566,6 +566,74 @@ footer { background: var(--ink); color: var(--text-on-dark-muted); padding: 44px
 .sticky-call .call { color: #fff; border: 1.5px solid var(--line-on-dark-strong); }
 .sticky-call .book { color: var(--ink); background: linear-gradient(180deg, var(--gold-light), var(--gold) 55%, var(--gold-deep)); box-shadow: var(--shadow-gold); }
 
+/* ───────────── Campaign mode (general vs. storm) ───────────── */
+html.campaign-general .only-storm { display: none !important; }
+html.campaign-storm .only-general { display: none !important; }
+
+/* ───────────── Hero: service chips ───────────── */
+.svc-chips { display: flex; flex-wrap: wrap; gap: 7px; margin: -4px 0 26px; }
+.svc-chips a {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-display); font-weight: 700; font-size: 12.5px; letter-spacing: 0;
+  color: #fff; padding: 8px 12px; border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+  border: 1px solid var(--line-on-dark);
+  transition: border-color .25s var(--ease), transform .25s var(--ease), background .25s var(--ease);
+}
+.svc-chips a::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+.svc-chips a:hover { border-color: rgba(202,153,55,.55); transform: translateY(-1px); }
+.trust-strip a.trust-item:hover strong { color: var(--gold-light); }
+.trust-stars { color: var(--gold); letter-spacing: 1px; font-size: 13px; }
+
+/* ───────────── Services: storm restoration link row ───────────── */
+.svc-storm-link {
+  margin-top: 22px; display: grid; grid-template-columns: auto 1fr auto; gap: 18px; align-items: center;
+  padding: 20px 24px; border-radius: var(--radius-lg);
+  background: #fff; border: 1px solid var(--paper-line); box-shadow: var(--shadow-sm);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+}
+.svc-storm-link:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: rgba(202,153,55,.45); }
+.svc-storm-icon { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: var(--gold-soft); border: 1px solid rgba(202,153,55,.35); }
+.svc-storm-icon svg { width: 24px; height: 24px; color: var(--gold-text); }
+.svc-storm-link strong { display: block; font-family: var(--font-display); font-weight: 800; font-size: 18px; letter-spacing: -.02em; }
+.svc-storm-link .d { display: block; margin-top: 3px; color: var(--text-dim); font-size: 15px; }
+.svc-storm-arrow { font-family: var(--font-display); font-weight: 800; font-size: 22px; color: var(--gold-text); transition: transform .25s var(--ease); }
+.svc-storm-link:hover .svc-storm-arrow { transform: translateX(4px); }
+
+/* ───────────── Insurance section ───────────── */
+.steps-grid.steps-4 { grid-template-columns: repeat(4, 1fr); }
+.promo-callout {
+  margin-top: 22px; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start;
+  padding: 20px 24px; border-radius: var(--radius-lg);
+  background: var(--ink); color: var(--text-on-dark-dim); border: 1px solid rgba(202,153,55,.35);
+  font-size: 15px; line-height: 1.6;
+}
+.promo-callout strong { display: block; color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+.promo-callout .offer-badge { color: var(--gold); background: rgba(202,153,55,.12); }
+.insurance-cta { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.insurance-note { color: var(--text-muted); font-size: 14px; }
+
+/* ───────────── Reviews: service tag + Google link ───────────── */
+.rv-tag {
+  display: inline-block; margin-bottom: 10px;
+  font-family: var(--font-display); font-size: 10.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--gold); background: rgba(202,153,55,.1); border: 1px solid rgba(202,153,55,.28);
+  padding: 5px 9px; border-radius: 999px;
+}
+.rv-link { color: var(--gold); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.rv-link:hover { color: var(--gold-light); }
+
+@media (max-width: 1024px) { .steps-grid.steps-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 900px)  { .steps-grid.steps-4 { grid-template-columns: 1fr; } }
+@media (max-width: 768px) {
+  .svc-chips { gap: 6px; margin-bottom: 22px; }
+  .svc-chips a { font-size: 12.5px; padding: 8px 12px; }
+  .svc-storm-link { grid-template-columns: auto 1fr; padding: 18px; }
+  .svc-storm-arrow { display: none; }
+  .promo-callout { grid-template-columns: 1fr; padding: 18px; }
+  .insurance-cta .btn { width: 100%; }
+}
+
 /* ───────────── Reveal animations (progressive) ───────────── */
 .js-enabled .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .js-enabled .reveal.in { opacity: 1; transform: none; }

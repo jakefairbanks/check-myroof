@@ -25,9 +25,16 @@ townPage('Castle Rock', 'castlerock'),
 
 Run `node build.js`, commit `castlerock.html`. Vercel's `cleanUrls` serves it at `/castlerock`.
 
-### Headline variants
+### Evergreen vs. storm mode
 
-Append `?v=hail | wind | deductible | storm-just-hit | denied` to any page URL to swap the hero copy (town-aware).
+The page is evergreen by default (general roofing & exterior messaging). **Storm mode** switches on the storm
+urgency band, storm hero copy, and the insurance-roof upgrade callout for:
+
+- town pages (`campaign: 'storm'` in `PAGES`)
+- `?c=storm`, or any ad variant `?v=hail | wind | deductible | storm-just-hit | denied` (keys match live ad URLs)
+
+Same page and sections either way. The upgrade offer lives in `PROMO` at the top of `build.js`
+(`enabled`, `endsText`). Leads carry `page_mode=general|storm`, and storm visits keep the original `lead_type` values.
 
 ### Tracking
 

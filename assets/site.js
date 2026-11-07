@@ -4,20 +4,32 @@
   const PAGE = window.PAGE || {};
   const params = new URLSearchParams(window.location.search);
 
-  // ── UTM-aware headline variants: ?v=hail | wind | deductible | storm-just-hit | denied
+  // ── Campaign mode + headline variants
+  //   General (evergreen) by default. Storm mode for town pages, ?c=storm, or ad variants
+  //   ?v=hail | wind | deductible | storm-just-hit | denied (keys match live ad URLs).
   (function applyVariant() {
-    const v = (params.get('v') || params.get('variant') || params.get('creative') || 'default').toLowerCase();
+    const v = (params.get('v') || params.get('variant') || params.get('creative') || '').toLowerCase();
+    const c = (params.get('c') || '').toLowerCase();
     const variants = PAGE.variants || {};
-    const variant = variants[v] || variants.default;
-    const h = document.getElementById('hero-headline');
-    const s = document.getElementById('hero-sub');
-    if (variant && h && variant.headline) h.innerHTML = variant.headline;
-    if (variant && s && variant.sub) s.innerHTML = variant.sub;
+    const stormKeys = PAGE.stormVariants || [];
+    const storm = PAGE.campaign === 'storm' || c === 'storm' || stormKeys.indexOf(v) > -1;
+    const root = document.documentElement;
+    root.classList.toggle('campaign-storm', storm);
+    root.classList.toggle('campaign-general', !storm);
+
+    const variant = storm ? (variants[v] || variants.storm) : variants.general;
+    const setHTML = (id, html) => { const el = document.getElementById(id); if (el && html) el.innerHTML = html; };
+    if (variant) { setHTML('hero-eyebrow', variant.eyebrow); setHTML('hero-headline', variant.headline); setHTML('hero-sub', variant.sub); }
 
     const set = (id, val) => { const el = document.getElementById(id); if (el) el.value = val; };
+    const lt = document.getElementById('lead_type');
+    if (lt) lt.value = storm ? lt.dataset.storm : lt.dataset.general;
+    const offer = document.getElementById('offer');
+    if (offer) offer.value = storm ? (offer.dataset.storm || '') : '';
+    set('page_mode', storm ? 'storm' : 'general');
     set('utm_source',   params.get('utm_source')   || params.get('source') || '');
     set('utm_campaign', params.get('utm_campaign') || '');
-    set('utm_creative', params.get('utm_creative') || v);
+    set('utm_creative', params.get('utm_creative') || v || (storm ? 'storm' : 'general'));
   })();
 
   // ── Meta Pixel: Contact on tap-to-call
