@@ -71,6 +71,26 @@
     });
   }
 
+  // ── Hero video: unmute + restart from the top on tap (Vimeo player.js)
+  const soundBtn = document.getElementById('video-sound');
+  const vimeoEl = document.getElementById('hero-vimeo');
+  if (soundBtn && vimeoEl) {
+    let player = null;
+    const getPlayer = () => (player = player || (window.Vimeo ? new Vimeo.Player(vimeoEl) : null));
+    soundBtn.addEventListener('click', async () => {
+      const p = getPlayer(); if (!p) return;
+      const on = soundBtn.getAttribute('aria-pressed') === 'true';
+      try {
+        if (on) { await p.setMuted(true); soundBtn.setAttribute('aria-pressed', 'false'); soundBtn.querySelector('.lbl').textContent = 'Play with sound'; }
+        else {
+          await p.setCurrentTime(0); await p.setMuted(false); await p.setVolume(1); await p.play();
+          soundBtn.setAttribute('aria-pressed', 'true'); soundBtn.querySelector('.lbl').textContent = 'Mute';
+          if (window.fbq) fbq('trackCustom', 'VideoSoundOn');
+        }
+      } catch (e) { /* autoplay policy edge cases: leave Vimeo's own controls as fallback */ }
+    });
+  }
+
   // ── Scroll reveal (progressive enhancement)
   document.documentElement.classList.add('js-enabled');
   const reveals = document.querySelectorAll('.reveal');

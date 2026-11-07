@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="/assets/hero.webp" type="image/webp">
-<link rel="stylesheet" href="/assets/site.css?v=0dcb69e1">
+<link rel="stylesheet" href="/assets/site.css?v=aebb75e6">
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
 <!-- Meta Pixel -->
@@ -102,10 +102,16 @@ fbq('track', 'PageView');
       <div class="hero-video">
         <span class="hero-corner tl" aria-hidden="true"></span>
         <div class="video-frame">
-          <iframe src="https://player.vimeo.com/video/1197583544?autoplay=1&loop=1&muted=1&autopause=0&app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" title="Storm damage experts — Ideal Roof & Exterior Pros"></iframe>
-          <div class="video-caption"><span class="dot"></span><span><strong>Jake Fairbanks</strong>, Owner · tap to unmute</span></div>
+          <iframe id="hero-vimeo" src="https://player.vimeo.com/video/1244508882?badge=0&autoplay=1&loop=1&muted=1&autopause=0&playsinline=1&app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Check My Roof — Ideal Roof & Exterior Pros"></iframe>
         </div>
         <span class="hero-corner br" aria-hidden="true"></span>
+        <div class="video-bar">
+          <span class="video-who"><span class="dot"></span><span><strong>Jake Fairbanks</strong> · Owner</span></span>
+          <button type="button" class="video-sound" id="video-sound" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg>
+            <span class="lbl">Play with sound</span>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -587,6 +593,7 @@ fbq('track', 'PageView');
 
 
 <script>window.PAGE = {"town":"Fort Morgan","variants":{"default":{"headline":"Hail Hit Fort Morgan? <span class=\"accent\">We Handle the Insurance Claim.</span>","sub":"Serving Fort Morgan, CO. Free roof inspection — if there’s hail or wind damage, we document it, meet your adjuster on-site, and handle the claim end-to-end. <strong>You pay only your deductible</strong> — and get a better roof than the one you lost."},"hail":{"headline":"Hail Hit Fort Morgan. <span class=\"accent\">Did It Total Your Roof?</span>","sub":"Hail damage is hard to see from the ground — but your insurer will pay to replace a damaged roof. Free inspection, full claim handling, you pay only your deductible."},"wind":{"headline":"Missing Shingles After the Wind? <span class=\"accent\">Insurance May Cover a New Roof.</span>","sub":"Wind damage qualifies for a claim just like hail. We inspect free, document everything, and handle the paperwork with your adjuster."},"deductible":{"headline":"A Class 4 Roof for <span class=\"accent\">Just Your Deductible.</span>","sub":"If the storm damaged your roof, insurance covers the replacement. You cover the deductible — we handle the entire claim and upgrade you to impact-rated shingles free."},"storm-just-hit":{"headline":"Storm Just Hit Fort Morgan? <span class=\"accent\">Get Inspected First.</span>","sub":"Don’t wait for a leak. We’ll inspect your roof free, document any hail or wind damage, and tell you straight whether it’s worth filing a claim."},"denied":{"headline":"Claim Denied or Underpaid? <span class=\"accent\">Let’s Take a Second Look.</span>","sub":"Insurers miss legitimate damage all the time. We re-inspect free, document what was missed, and work the claim with your adjuster. You pay only your deductible."}},"gtagLeadLabel":null,"gtagScheduleLabel":null,"gtagContactLabel":null};</script>
-<script src="/assets/site.js?v=76f64e2d" defer></script>
+<script src="https://player.vimeo.com/api/player.js" defer></script>
+<script src="/assets/site.js?v=626c5274" defer></script>
 </body>
 </html>

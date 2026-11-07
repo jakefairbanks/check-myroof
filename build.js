@@ -32,7 +32,8 @@ const SITE = {
   gtagContactLabel: null,   // fired on tap-to-call
   calendlyUrl: 'https://calendly.com/idealsalesteam/roof-property-inspection-hail-wind-insurance?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=ca9937',
   webhookUrl: 'https://hooks.zapier.com/hooks/catch/11818737/4briloh/',
-  vimeoSrc: 'https://player.vimeo.com/video/1197583544?autoplay=1&loop=1&muted=1&autopause=0&app_id=58479',
+  // 1:1 square hero video. Autoplays muted + loops; the "Play with sound" button unmutes via player.js.
+  vimeoSrc: 'https://player.vimeo.com/video/1244508882?badge=0&autoplay=1&loop=1&muted=1&autopause=0&playsinline=1&app_id=58479',
   googleMaps: 'https://www.google.com/maps?cid=1632221881571773114',
   reviewScore: '5.0',
   reviewCount: '188',
@@ -291,10 +292,16 @@ function hero(page) {
       <div class="hero-video">
         <span class="hero-corner tl" aria-hidden="true"></span>
         <div class="video-frame">
-          <iframe src="${SITE.vimeoSrc}" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" title="Storm damage experts — ${SITE.brand}"></iframe>
-          <div class="video-caption"><span class="dot"></span><span><strong>Jake Fairbanks</strong>, Owner · tap to unmute</span></div>
+          <iframe id="hero-vimeo" src="${SITE.vimeoSrc}" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Check My Roof — ${SITE.brand}"></iframe>
         </div>
         <span class="hero-corner br" aria-hidden="true"></span>
+        <div class="video-bar">
+          <span class="video-who"><span class="dot"></span><span><strong>Jake Fairbanks</strong> · Owner</span></span>
+          <button type="button" class="video-sound" id="video-sound" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg>
+            <span class="lbl">Play with sound</span>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -651,6 +658,7 @@ function scripts(page) {
   };
   return `
 <script>window.PAGE = ${JSON.stringify(cfg)};</script>
+<script src="https://player.vimeo.com/api/player.js" defer></script>
 <script src="/assets/site.js?v=${JS_V}" defer></script>
 </body>
 </html>
